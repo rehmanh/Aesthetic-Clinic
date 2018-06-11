@@ -1,6 +1,6 @@
 class ProceduresController < ApplicationController
 
-	def index 
+	def index
 		@procedures = Procedure.all
 	end
 
