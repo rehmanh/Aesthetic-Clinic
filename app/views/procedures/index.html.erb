@@ -1,0 +1,11 @@
+<h1><%= pluralize(@procedures.size, 'Procedure') %></h1>
+
+<p>
+	<ol>
+		<% @procedures.each do |proc| %>
+			<li>
+				<b> <%= proc.name %> </b> | <%= proc.description %>
+			</li>
+		<% end %>
+	</ol>
+</p>
