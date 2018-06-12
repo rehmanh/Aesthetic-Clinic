@@ -4,8 +4,9 @@
 	<ol>
 		<% @procedures.each do |proc| %>
 			<li>
-				<b> <%= proc.name %> </b> | <%= proc.description %>
+        <%= link_to proc.name, procedure_path(proc) %> 
 			</li>
 		<% end %>
 	</ol>
 </p>
+

@@ -4,4 +4,8 @@ class ProceduresController < ApplicationController
     @procedures = Procedure.all
   end
 
+  def show
+    @procedure = Procedure.find(params[:id])
+  end
+
 end
