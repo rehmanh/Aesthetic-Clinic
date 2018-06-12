@@ -3,19 +3,20 @@
 		<ol>
 			<li>
 				<%= u.label :name %>
-				<%= u.text_field :name, size: 40, autofocus: true %>
+				<%= u.text_field :name, size: 40, autofocus: true, required: true %>
 			</li>
 			<li>
 				<%= u.label :email %>
-				<%= u.email_field :email, size: 40 %>
+				<%= u.email_field :email, size: 40, required: true %>
 			</li>
 			<li>
 				<%= u.label :phone_number %>
-				<%= u.text_field :phone_number, size: 40 %>
+				<%= u.text_field :phone_number, size: 40, required: true %>
 			</li>
 			<li>
 				<%= u.label :complaint %>
-				<%= u.text_area :complaint, cols: 40, rows: 7 %>
+
+				<%= u.text_area :complaint, cols: 40, rows: 7, required: true %>
 			</li>
 		</ol>
 		<p>
