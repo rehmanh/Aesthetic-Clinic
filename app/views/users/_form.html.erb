@@ -1,0 +1,27 @@
+<%= form_for(@user) do |u| %>
+	<fieldset>
+		<ol>
+			<li>
+				<%= u.label :name %>
+				<%= u.text_field :name, size: 40, autofocus: true %>
+			</li>
+			<li>
+				<%= u.label :email %>
+				<%= u.email_field :email, size: 40 %>
+			</li>
+			<li>
+				<%= u.label :phone_number %>
+				<%= u.text_field :phone_number, size: 40 %>
+			</li>
+			<li>
+				<%= u.label :complaint %>
+				<%= u.text_area :complaint, cols: 40, rows: 7 %>
+			</li>
+		</ol>
+		<p>
+			<%= u.submit %> |
+      <%= link_to "Cancel", users_path %>
+		</p>
+	</fieldset>
+<% end %>
+

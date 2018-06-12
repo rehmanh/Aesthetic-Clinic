@@ -1,4 +1,4 @@
-<h1><%= pluralize(@procedures.size, 'Procedure') %></h1>
+<h2><%= pluralize(@procedures.size, 'Procedure') %></h2>
 
 <p>
 	<ol>
@@ -8,5 +8,9 @@
 			</li>
 		<% end %>
 	</ol>
+</p>
+
+<p>
+  <%= link_to "New Procedure", new_procedure_path %>
 </p>
 

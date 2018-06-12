@@ -1,0 +1,15 @@
+<%= form_for @procedure do |p| %>
+	<p>
+		<%= p.label :name %></br>
+		<%= p.text_field :name, autofocus: true %>
+	</p>
+	<p>
+		<%= p.label :description %></br>
+		<%= p.text_area :description, cols: 40, rows: 7 %>
+	</p>
+	<p>
+		<%= p.submit %> |
+		<%= link_to("Cancel", procedures_path) %>
+	</p>
+<% end %>
+
