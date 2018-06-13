@@ -25,7 +25,8 @@ Procedure.create!([
 
 User.create!([
   {
-    name: 'John Doe',
+    first_name: 'John',
+    last_name: 'Doe',
     email: 'john@example.com',
     phone_number: '03009233780',
     complaint:
@@ -34,7 +35,8 @@ User.create!([
     }.squish
   },
   {
-    name: 'Jane Doe',
+    first_name: 'Jane',
+    last_name: 'Doe',
     email: 'jane@example.com',
     phone_number: '666-666-6666',
     complaint:
@@ -43,7 +45,8 @@ User.create!([
     }.squish
   },
   {
-    name: 'Charlie Man',
+    first_name: 'Charlie',
+    last_name: 'Mann',
     email: 'charles@mann.com',
     phone_number: '03009233780',
     complaint: 
@@ -52,7 +55,8 @@ User.create!([
     }.squish
   },
   {
-    name: 'Hanson the Unicorn',
+    first_name: 'Hanson, The',
+    last_name: 'Unicorn',
     email: 'hanson@theunicorn.com',
     phone_number: '67867867867867867867867867',
     complaint: 

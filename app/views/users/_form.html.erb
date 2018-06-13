@@ -2,8 +2,12 @@
 	<fieldset>
 		<ol>
 			<li>
-				<%= u.label :name %>
-				<%= u.text_field :name, size: 40, autofocus: true, required: true %>
+				<%= u.label :first_name %>
+				<%= u.text_field :first_name, size: 40, autofocus: true, required: true %>
+			</li>
+			<li>
+				<%= u.label :last_name %>
+				<%= u.text_field :last_name, size: 40, autofocus: true, required: true %>
 			</li>
 			<li>
 				<%= u.label :email %>
