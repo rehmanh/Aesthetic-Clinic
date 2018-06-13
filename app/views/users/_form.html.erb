@@ -15,11 +15,10 @@
 			</li>
 			<li>
 				<%= u.label :phone_number %>
-				<%= u.text_field :phone_number, size: 40, required: true %>
+				<%= u.text_field :phone_number, size: 40, required: true, type: "number" %>
 			</li>
 			<li>
 				<%= u.label :complaint %>
-
 				<%= u.text_area :complaint, cols: 40, rows: 7, required: true %>
 			</li>
 		</ol>
