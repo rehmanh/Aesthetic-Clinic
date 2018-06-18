@@ -1,14 +1,14 @@
 <%= form_for(@user) do |u| %>
   <%= render 'shared/errors' %>
 	<fieldset>
-		<ol>
+		<ul>
 			<li>
 				<%= u.label :first_name %>
 				<%= u.text_field :first_name, size: 40, autofocus: true, required: true %>
 			</li>
 			<li>
 				<%= u.label :last_name %>
-				<%= u.text_field :last_name, size: 40, autofocus: true, required: true %>
+				<%= u.text_field :last_name, size: 40, required: true %>
 			</li>
 			<li>
 				<%= u.label :email %>
@@ -18,13 +18,27 @@
 				<%= u.label :phone_number %>
 				<%= u.text_field :phone_number, size: 40, required: true, type: "number" %>
 			</li>
+      <li>
+        <%= u.label :password %>
+        <%= u.password_field :password, size: 40, required: true %>
+      </li>
+      <li>
+        <%= u.label :password_confirmation %>
+        <%= u.password_field :password_confirmation, size: 40, required: true %>
+      </li>
+
 			<li>
 				<%= u.label :complaint %>
 				<%= u.text_area :complaint, cols: 40, rows: 7 %>
 			</li>
-		</ol>
+		</ul>
 		<p>
-			<%= u.submit %> |
+      <% if @user.new_record? %>
+			  <%= u.submit "Create Account" %>
+      <% else %>
+        <%= u.submit "Update Account" %>
+      <%end%>
+      <br/>
       <%= link_to "Cancel", users_path %>
 		</p>
 	</fieldset>
