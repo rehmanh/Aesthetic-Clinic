@@ -1,0 +1,11 @@
+<% if @user.errors.any? %>
+<section>
+  <h3>The <%= @user.class.name.titleize.downcase %> could not be saved.</h3>
+  <h3>Please correct the following <%= pluralize(@user.errors.count, 'error') %>:</h3>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</section>
+<% end %>

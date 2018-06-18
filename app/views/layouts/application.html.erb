@@ -10,6 +10,11 @@
 
   <body>
     <%= render 'layouts/header' %>
+
+    <% if flash[:notice] %>
+      <%= flash[:notice] %>
+    <% end %>
+    
     <%= render 'layouts/sidebar' %>
     <%= yield %>
   </body>
