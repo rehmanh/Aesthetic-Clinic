@@ -6,7 +6,9 @@
     <%= @procedure.description %>
   </p>
   <p>
-    <%= link_to "Edit Procedure", edit_procedure_url %> | 
-    <%= link_to "Delete Procedure", procedure_path(@procedure), method: :delete, data: { confirm: 'Are you sure you want to delete this procedure?' } %>
+    <% if is_user_admin? %>
+      <%= link_to "Edit Procedure", edit_procedure_url %> | 
+      <%= link_to "Delete Procedure", procedure_path(@procedure), method: :delete, data: { confirm: 'Are you sure you want to delete this procedure?' } %>
+    <% end %>
   </p> 
 </div>

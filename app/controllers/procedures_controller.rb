@@ -1,6 +1,7 @@
 class ProceduresController < ApplicationController
 
-  #before_action :require_signin, except: [:show, :index]
+  before_action :require_signin, except: [:index, :show] # want non-admins only View rights
+  before_action :require_admin_rights, except: [:index, :show] 
 
   def index
     @procedures = Procedure.all

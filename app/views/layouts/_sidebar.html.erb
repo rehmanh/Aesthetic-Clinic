@@ -4,9 +4,11 @@
       <li>
         <%= link_to 'Procedures', procedures_path %>
       </li>
+      <% if is_user_admin? %>
       <li>
-        <%= link_to 'Patients', users_path %>
+          <%= link_to 'Patients', users_path %>
       </li>
+      <% end %>
     </ul>
   </div>
 </aside>

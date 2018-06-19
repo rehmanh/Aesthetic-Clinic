@@ -11,6 +11,8 @@
 </p>
 
 <p>
-  <%= link_to "New Procedure", new_procedure_path %>
+  <% if is_user_admin?  %>
+    <%= link_to "New Procedure", new_procedure_path %>
+  <% end %>
 </p>
 
