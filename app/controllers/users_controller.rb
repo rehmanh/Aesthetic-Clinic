@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :require_signin, except: [:new, :create]
+  before_action :require_signin, except: [:new, :create] # require_signin is defined in ApplicationController
+  before_action :require_correct_user, except: [:create, :new, :index, :show] # only want correct user for update, destroy and edit 
   
   def index
     @users = User.all

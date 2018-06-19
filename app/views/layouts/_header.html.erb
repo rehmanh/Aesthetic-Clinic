@@ -3,7 +3,7 @@
   <nav style="position: relative;">
   <% if session[:user_id] %>
   <p> 
-    <%= link_to User.find(session[:user_id]).first_name, User.find(session[:user_id]) %>
+    <%= link_to user_name(User.find(session[:user_id])), User.find(session[:user_id]) %>
   </p>
   <p>
     <%= link_to 'Sign Out', session_path, method: :delete %>

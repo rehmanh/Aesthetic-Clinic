@@ -1,5 +1,7 @@
 class ProceduresController < ApplicationController
 
+  #before_action :require_signin, except: [:show, :index]
+
   def index
     @procedures = Procedure.all
   end
