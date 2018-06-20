@@ -11,6 +11,9 @@
 
 <p>
   <% if @user == current_user %>
+    <%= link_to "Schedule an Appointment", new_appointments_path %>
+    <br>
+    <br>
     <%= link_to "Edit Account", edit_user_path %> |
     <%= link_to "Delete Account", user_path(@user), method: :delete, data: {  confirm: 'Are you sure you want to delete this patient?' }  %>
   <% end %>

@@ -1,0 +1,26 @@
+<header>
+  <h1>Your Appointments</h1>
+</header>
+<body>
+  <% if @appointments.nil? %>
+    There seems to be nothing here.
+  <% else %>
+    <h3><%= pluralize(@appointments.count, 'Appointment') %> Upcoming:</h3>
+    <ul>
+    <% @appointments.each do |appt| %>
+        <li>
+          Location: <% appt.location %>
+        </li> 
+        <li>
+          Date: <% appt.date_of_appointment %>
+        </li>
+        <li>
+          Time: <% appt.time_of_appointment %>
+        </li>
+        <li>
+          Complaint: <% appt.complaint %>
+        </li>
+    <% end %>
+    </ul>
+  <% end %>
+</body>

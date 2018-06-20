@@ -1,6 +1,6 @@
 class User < ApplicationRecord
  
-
+  has_many :appointments, dependent: :destroy
   has_secure_password
 
   validates :first_name, presence: true
