@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-
+ 
   before_action :require_signin, except: [:new, :create] # require_signin is defined in ApplicationController
-  before_action :require_admin_rights, except: [:create, :new]
-  before_action :require_correct_user, except: [:create, :new, :index, :show] # only want correct user for update, destroy and edit 
   
   def index
     if is_user_admin?
@@ -13,7 +11,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def show 
+  def show
     @user = User.find(params[:id])
   end
 
@@ -42,6 +40,10 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    unless @user == current_user
+      flash[:alert] = "Cannot perform that action"
+      redirect_to @user
+    end
   end
 
   def update
@@ -61,7 +63,6 @@ private
   end
 
   def require_correct_user
-    @user = User.find(params[:id])
     unless is_user_admin? # current_user == @user && is_user_admin? 
       flash[:alert] = "Unauthorized access"
       redirect_to procedures_path
