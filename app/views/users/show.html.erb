@@ -6,11 +6,13 @@
   <h3>Phone Number</h3>
   <p> <%= @user.phone_number %> </p>
   <h3>Upcoming Appointments</h3> 
-  <% if @appointments.exists? %><ul>
+  <% if @appointments.exists? %>
+    <ul>
     <% @appointments.each do |appt| %>
-      <li>Location: <%= appt.location %> <br>
-      Date: <%= appt.date_of_appointment %> <br>
-      Time: <%= appt.time_of_appointment %> <br>
+      <li>
+        Location: <%= appt.location %> <br>
+        Date: <%= format_date(appt.date_of_appointment)  %> <br>
+        Time: <%= format_time(appt.time_of_appointment) %> <br>
       <% if@user == current_user %>
         <%= link_to "Edit Appointment", edit_appointment_path(appt) %> |
         <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
@@ -22,7 +24,6 @@
   <% else %>
     <p>You do not have any upcoming appointments.</p>
   <% end %>
-
 </div>
 
 <p>
