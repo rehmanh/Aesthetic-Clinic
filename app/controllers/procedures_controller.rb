@@ -27,8 +27,11 @@ class ProceduresController < ApplicationController
 
   def create
     @procedure = Procedure.new(procedure_params)
-    @procedure.save
-    redirect_to @procedure
+    if @procedure.save
+      redirect_to @procedure
+    else
+      render :new
+    end
   end
 
   def destroy

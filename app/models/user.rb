@@ -14,4 +14,8 @@ class User < ApplicationRecord
     message: "entered is not valid. Please enter a valid phone number." 
   }
 
+  def has_max_appointments
+    appointments.count == 2
+  end
+
 end

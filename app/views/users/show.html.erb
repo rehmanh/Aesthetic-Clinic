@@ -11,8 +11,10 @@
       <li>Location: <%= appt.location %> <br>
       Date: <%= appt.date_of_appointment %> <br>
       Time: <%= appt.time_of_appointment %> <br>
-      <%= link_to "Edit Appointment", edit_appointment_path(appt) %> |
-      <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+      <% if@user == current_user %>
+        <%= link_to "Edit Appointment", edit_appointment_path(appt) %> |
+        <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+      <% end %>
       </li>
       <br>
     <% end %>
@@ -25,8 +27,8 @@
 
 <p>
   <% if @user == current_user%>
-    <% if has_max_appointments(@user) %>
-    Maximum number of appointments scheduled.
+    <% if @user.has_max_appointments %>
+      Maximum number of appointments scheduled.
     <% else %>
       <%= link_to "Schedule New Appointment", new_appointment_path %>
     <% end %>
