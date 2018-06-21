@@ -22,6 +22,27 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @appointment = @user.appointments.find(params[:id])
+    @appointment.destroy
+    flash[:notice] = "Appointment successfully cancelled."
+    redirect_to @user
+  end
+
+  def edit
+    @appointment = @user.appointments.find(params[:id])
+  end
+
+  def update
+    @appointment = @user.appointments.find(params[:id])
+    if @appointment.update(appointment_params)
+      flash[:notice] = "Your appointment was updated."
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
 private
   
   def appointment_params

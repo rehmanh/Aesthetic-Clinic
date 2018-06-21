@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :procedures
   resource :session
-  resource :appointments
-
+  resources :appointments
+  root "procedures#index"
   get 'signup' => "users#new"
 end

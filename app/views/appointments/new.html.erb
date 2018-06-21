@@ -4,28 +4,6 @@
     <h1>Schedule An Appointment</h1>
   </header>
 
-  <%= form_for(@appointment) do |f| %>
-  <%= render "shared/errors" %>
-  <fieldset>
-    <ul>
-      <li>
-        <%= f.label :date_of_appointment %>
-        <%= f.date_select :date_of_appointment %>
-      </li>
-      <li>
-        <%= f.label :time_of_appointment %>
-        <%= f.time_select :time_of_appointment %>
-      </li>
-      <li>
-        <%= f.label :location %>
-        <%= f.text_field :location %>
-      </li>
-    </ul>
-    <p>
-      <%= f.submit 'Schedule Appointment' %>
-      <%= link_to "Cancel", @user %>
-    </p>
-  </fieldset>
-<% end %>
+  <%= render 'form' %>
 
-</html>
+  </html>

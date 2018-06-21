@@ -5,17 +5,35 @@
   <p> <%= @user.email %> </p>
   <h3>Phone Number</h3>
   <p> <%= @user.phone_number %> </p>
-  <h3>Complaint</h3>
-  <p> <%= @user.complaint %> </p>
+  <h3>Upcoming Appointments</h3> 
+  <% if @appointments.exists? %><ul>
+    <% @appointments.each do |appt| %>
+      <li>Location: <%= appt.location %> <br>
+      Date: <%= appt.date_of_appointment %> <br>
+      Time: <%= appt.time_of_appointment %> <br>
+      <%= link_to "Edit Appointment", edit_appointment_path(appt) %> |
+      <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+      </li>
+      <br>
+    <% end %>
+    </ul>
+  <% else %>
+    <p>You do not have any upcoming appointments.</p>
+  <% end %>
+
 </div>
 
 <p>
-  <% if @user == current_user %>
-    <%= link_to "Schedule an Appointment", new_appointments_path %>
+  <% if @user == current_user%>
+    <% if has_max_appointments(@user) %>
+    Maximum number of appointments scheduled.
+    <% else %>
+      <%= link_to "Schedule New Appointment", new_appointment_path %>
+    <% end %>
     <br>
     <br>
     <%= link_to "Edit Account", edit_user_path %> |
-    <%= link_to "Delete Account", user_path(@user), method: :delete, data: {  confirm: 'Are you sure you want to delete this patient?' }  %>
+    <%= link_to "Delete Account", user_path(@user), method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' }  %>
   <% end %>
 </p>
 
