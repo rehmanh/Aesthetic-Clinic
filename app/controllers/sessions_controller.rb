@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-    # emptiness
   end
 
   def create

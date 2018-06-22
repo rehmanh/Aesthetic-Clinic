@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def require_admin_rights
     unless is_user_admin?
       flash[:alert] = "You do not have permission to view this page"
-      redirect_to procedures_path
+      redirect_to root_url
     end
   end
 

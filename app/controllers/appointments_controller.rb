@@ -2,9 +2,10 @@ class AppointmentsController < ApplicationController
 
   before_action :require_signin
   before_action :set_user
+  before_action :require_admin_rights, only: [:index]
 
   def index
-    @appointments = @user.appointments
+    @appointments = Appointment.all
   end
 
   def new

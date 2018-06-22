@@ -4,16 +4,28 @@
     <ul>
       <li>
         <%= f.label :date_of_appointment %>
-        <%= f.date_select :date_of_appointment %>
+        <%= f.date_select :date_of_appointment, {
+          order: [:day, :month, :year]
+        } %>
       </li>
       <li>
         <%= f.label :time_of_appointment %>
-        <%= f.time_select :time_of_appointment %>
+        <%= f.time_select :time_of_appointment, {
+          minute_step: 30, 
+          ampm: true,
+          start_hour: 15,
+          end_hour: 21
+        } %>
       </li>
       <li>
         <%= f.label :location %>
-        <%= f.text_field :location %>
+        <%= f.select :location, ['National Medical Center', 'Arif Medical Center'], :prompt => 'Select location' %>
       </li>
+      <li>
+        <%= f.label :complaint %>
+        <%= f.text_area :complaint, cols: 40, rows: 7 %>
+      </li>
+
     </ul>
     <p>
       <%= f.submit %>
@@ -21,4 +33,5 @@
     </p>
   </fieldset>
 <% end %>
+
 

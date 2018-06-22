@@ -1,5 +1,5 @@
 <header>
-  <h1>Your Appointments</h1>
+  <h1>All Appointments</h1>
 </header>
 <body>
   <% if @appointments.nil? %>
@@ -8,18 +8,13 @@
     <h3><%= pluralize(@appointments.count, 'Appointment') %> Upcoming:</h3>
     <ul>
     <% @appointments.each do |appt| %>
-        <li>
-          Location: <% appt.location %>
-        </li> 
-        <li>
-          Date: <% appt.date_of_appointment %>
-        </li>
-        <li>
-          Time: <% appt.time_of_appointment %>
-        </li>
-        <li>
-          Complaint: <% appt.complaint %>
-        </li>
+      <li>
+        Patient: <%= user_name(appt.user) %><br>
+        Location: <%= appt.location %><br>
+        Date: <%= format_date(appt.date_of_appointment) %><br>
+        Time: <%= format_time(appt.time_of_appointment) %><br>
+        Complaint: <%= appt.complaint %> <br>
+      </li> <br>
     <% end %>
     </ul>
   <% end %>

@@ -1,14 +1,10 @@
 class UsersController < ApplicationController
  
   before_action :require_signin, except: [:new, :create] # require_signin is defined in ApplicationController
+  before_action :require_admin_rights, only: [:index]
   
   def index
-    if is_user_admin?
-      @users = User.all
-    else
-      flash[:alert] = "Unauthorized access."
-      redirect_to procedures_path
-    end
+    @users = User.all
   end
 
   def show
