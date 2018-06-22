@@ -28,9 +28,7 @@
 
 <p>
   <% if @user == current_user%>
-    <% if @user.has_max_appointments %>
-      Maximum number of appointments scheduled.
-    <% else %>
+    <% if !@user.has_max_appointments %>
       <%= link_to "Schedule New Appointment", new_appointment_path %>
     <% end %>
     <br>

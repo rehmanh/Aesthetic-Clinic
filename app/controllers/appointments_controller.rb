@@ -9,7 +9,12 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = @user.appointments.new
+    if @user.has_max_appointments
+      flash[:alert] = "You cannot schedule more than two appointments at once."
+      redirect_to @user
+    else
+      @appointment = @user.appointments.new
+    end
   end
 
   def create

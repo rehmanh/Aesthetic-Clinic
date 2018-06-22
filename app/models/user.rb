@@ -13,9 +13,11 @@ class User < ApplicationRecord
     with: /\d{11}/, 
     message: "entered is not valid. Please enter a valid phone number." 
   }
+  validates :appointments, length: { maximum: 2 }
 
   def has_max_appointments
-    appointments.count == 2
+    errors.add(:appointments, "limit exceeded.") if
+      appointments.count >= 2
   end
 
 end

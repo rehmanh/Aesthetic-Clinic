@@ -24,7 +24,7 @@ class Appointment < ApplicationRecord
 
   def appointment_time_cannot_be_in_the_past
     errors.add(:time_of_appointment, "can't be in the past") if
-      time_of_appointment < Time.now
+      time_of_appointment >= Time.now
   end
 
   def appointments_cannot_clash 
