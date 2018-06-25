@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625150238) do
+ActiveRecord::Schema.define(version: 20180625184831) do
 
   create_table "appointments", force: :cascade do |t|
     t.string   "location"
     t.text     "complaint"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "user_id"
     t.datetime "appointment_date_time"
+    t.boolean  "completed",             default: false
   end
 
   create_table "procedures", force: :cascade do |t|
