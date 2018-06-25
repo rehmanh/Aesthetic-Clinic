@@ -3,21 +3,10 @@
   <fieldset>
     <ul>
       <li>
-        <%= f.label :date_of_appointment %>
-        <%= f.date_select :date_of_appointment, {
-          order: [:day, :month, :year]
-        } %>
+        <%= f.label :appointment_date_time %>
+        <%= f.datetime_select :appointment_date_time %>
       </li>
-      <li>
-        <%= f.label :time_of_appointment %>
-        <%= f.time_select :time_of_appointment, {
-          minute_step: 30, 
-          ampm: true,
-          start_hour: 15,
-          end_hour: 21
-        } %>
-      </li>
-      <li>
+           <li>
         <%= f.label :location %>
         <%= f.select :location, ['National Medical Center', 'Arif Medical Center'], :prompt => 'Select location' %>
       </li>
@@ -34,4 +23,4 @@
   </fieldset>
 <% end %>
 
-
+       
