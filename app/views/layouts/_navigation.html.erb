@@ -1,17 +1,22 @@
-<nav class="top-bar">
+<div class="top-bar">
   <ul class="title-area">
     <li class="name">
       <h1> <%= link_to "Dr. Obaid's Aesthetic Clinic", root_url %> </h1>
     </li>
   </ul>
+
   <section class="top-bar-section">
-    <ul class="right">
+    <ul class="menu right" data-dropdown-menu>
       <li class="divider"></li>
       <% if session[:user_id] %>
       <li class="divider"></li>
-      <li><%= link_to user_name(User.find(session[:user_id])), User.find(session[:user_id])%></li>
+      <li class ="has-submenu">
+				<%= link_to user_name(User.find(session[:user_id])), User.find(session[:user_id])%>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><%= link_to 'Sign Out', session_path, method: :delete %></li>
+        </ul>
+			</li>
       <li class="divider"></li>
-      <li><%= link_to 'Sign Out', session_path, method: :delete %></li>
       <% else %>
       <li class="divider"></li>
       <li><%= link_to 'Sign Up', signup_path %></li>
@@ -20,4 +25,4 @@
       <% end %>
     </ul>
   </section>
-</nav>
+</div>

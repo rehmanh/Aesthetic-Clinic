@@ -9,15 +9,13 @@
   <% if @appointments.exists? %>
     <ul>
     <% @appointments.each do |appt| %>
-      <li>
         Location: <%= appt.location %> <br>
         Date: <%= format_date(appt.appointment_date_time)  %> <br>
         Time: <%= format_time(appt.appointment_date_time) %> <br>
       <% if@user == current_user %>
-        <%= link_to "Edit Appointment", edit_appointment_path(appt) %> |
-        <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+        <%= link_to "Edit Appointment", edit_appointment_path(appt), class: 'small button' %>
+        <%= link_to "Cancel Appointment", appointment_path(appt), class: 'small alert button', method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
       <% end %>
-      </li>
       <br>
     <% end %>
     </ul>
@@ -29,12 +27,12 @@
 <p>
   <% if @user == current_user%>
     <% if !@user.has_max_appointments %>
-      <%= link_to "Schedule New Appointment", new_appointment_path %>
+      <%= link_to "Schedule New Appointment", new_appointment_path, class: 'small button success' %>
     <% end %>
     <br>
     <br>
-    <%= link_to "Edit Account", edit_user_path %> |
-    <%= link_to "Delete Account", user_path(@user), method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' }  %>
+    <%= link_to "Edit Account", edit_user_path, class: 'button' %> 
+    <%= link_to "Delete Account", root_url, class: 'alert button', method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' }  %>
   <% end %>
 </p>
 

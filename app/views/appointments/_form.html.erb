@@ -1,26 +1,19 @@
 <%= form_for(@appointment) do |f| %>
   <%= render "shared/errors", object: @appointment %>
-  <fieldset>
+  <form>
     <ul>
-      <li>
         <%= f.label :appointment_date_time %>
         <%= f.datetime_select :appointment_date_time, ampm: true %>
-      </li>
-           <li>
         <%= f.label :location %>
         <%= f.select :location, ['National Medical Center', 'Arif Medical Center'], :prompt => 'Select location' %>
-      </li>
-      <li>
         <%= f.label :complaint %>
         <%= f.text_area :complaint, cols: 40, rows: 7 %>
-      </li>
-
     </ul>
     <p>
       <%= f.submit %>
       <%= link_to "Cancel", @user %>
     </p>
-  </fieldset>
+  </form>
 <% end %>
 
        
