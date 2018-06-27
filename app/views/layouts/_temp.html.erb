@@ -1,23 +1,23 @@
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Site Title</li>
-      <li class="has-submenu">
-        <a href="#0">One</a>
-        <ul class="submenu menu vertical" data-submenu>
-          <li><a href="#0">One</a></li>
-          <li><a href="#0">Two</a></li>
-          <li><a href="#0">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#0">Two</a></li>
-      <li><a href="#0">Three</a></li>
-    </ul>
+<div class="row">
+  
+  <div class="columns">
+    <button class="button" data-open="signInModal">Sign In</button>
+    <button class="button" data-open="signUpModal">Sign Up</button>
+   </div>
+
+  <div class="reveal" id="signInModal" data-reveal>
+    <%= render 'sessions/new' %>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
+
+  <div class="reveal" id="signUpModal" data-reveal>
+    <%= render 'users/testing_new_user' %>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
+
+
 </div>
