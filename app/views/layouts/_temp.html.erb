@@ -7,15 +7,16 @@
 
   <div class="reveal" id="signInModal" data-reveal>
     <%= render 'sessions/new' %>
-    <button class="close-button" data-close aria-label="Close reveal" type="button">
-      <span aria-hidden="true">&times;</span>
+    <button class="close-button" data-close type="button">
+      &times;
     </button>
   </div>
 
   <div class="reveal" id="signUpModal" data-reveal>
-    <%= link_to "hello", new_user_path %>
-    <button class="close-button" data-close aria-label="Close reveal" type="button">
-      <span aria-hidden="true">&times;</span>
+    <%#= render template: 'users/new' %>
+    <%#= render 'users/new' %>
+    <button class="close-button" data-close type="button">
+      &times;
     </button>
   </div>
 

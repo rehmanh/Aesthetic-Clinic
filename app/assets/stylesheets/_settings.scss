@@ -819,7 +819,8 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $black;
+//$titlebar-background: $black;
+$titlebar-background: rgba(black, 0.5);
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
