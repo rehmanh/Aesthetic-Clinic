@@ -1,0 +1,8 @@
+//$(document).foundation();
+$('#signUpModal').html("<%= j render 'modal' %>");
+//$('#form_modal').foundation('reveal', 'open');
+var mod = new Foundation.Reveal($('#form_modal'));
+$("#myLink").click(function() { 
+//  $('#form_modal').foundation('reveal', 'open', "localhost:3000");
+  mod.open();
+});
