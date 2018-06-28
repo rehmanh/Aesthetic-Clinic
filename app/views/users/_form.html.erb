@@ -1,29 +1,29 @@
-<%= form_for(@user) do |u| %>
-  <%= render 'shared/errors', object: @user %>
-	<form>
-		<ul>
-				<%= u.label :first_name %>
-				<%= u.text_field :first_name, size: 40, autofocus: true, required: true %>
-				<%= u.label :last_name %>
-				<%= u.text_field :last_name, size: 40, required: true %>
-				<%= u.label :email %>
-				<%= u.email_field :email, size: 40, required: true %>
-				<%= u.label :phone_number %>
-				<%= u.text_field :phone_number, size: 40, required: true, type: "number" %>
-        <%= u.label :password %>
-        <%= u.password_field :password, size: 40, required: true %>
-        <%= u.label :password_confirmation %>
-        <%= u.password_field :password_confirmation, size: 40, required: true %>
-		</ul>
-		<p>
-      <% if @user.new_record? %>
-			  <%= u.submit "Create Account", class: 'button success' %>
-        <%= link_to "Cancel", root_url, class: 'alert button' %>
-      <% else %>
-        <%= u.submit "Update Account", class: 'button' %>
-        <%= link_to "Cancel", @user, class: 'alert button' %>
-      <%end%>
-		</p>
-	</form>
-<% end %>
-
+<div class="row">
+  <div class="column">
+    <h1>Sign Up</h1>
+    <%= form_for(@user) do |u| %>
+      <%= render 'shared/errors', object: @user %>
+    	<form>
+    		<ul>
+    				<%= u.label :first_name %>
+    				<%= u.text_field :first_name, size: 40, autofocus: true, required: true %>
+    				<%= u.label :last_name %>
+    				<%= u.text_field :last_name, size: 40, required: true %>
+    				<%= u.label :email %>
+    				<%= u.email_field :email, size: 40, required: true %>
+    				<%= u.label :phone_number %>
+    				<%= u.text_field :phone_number, size: 40, required: true, type: "number" %>
+            <%= u.label :password %>
+            <%= u.password_field :password, size: 40, required: true %>
+            <%= u.label :password_confirmation %>
+            <%= u.password_field :password_confirmation, size: 40, required: true %>
+            <% if @user.new_record? %>
+    		      <%= u.submit "Create Account", class: 'button success' %>
+            <% else %>
+              <%= u.submit "Update Account", class: 'button' %>
+            <%end%>
+    		</ul>
+    	</form>
+    <% end %>
+  </div>
+</div>
