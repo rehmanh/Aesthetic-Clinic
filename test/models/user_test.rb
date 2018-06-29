@@ -1,13 +1,14 @@
 require 'test_helper'
 
 describe User do 
-  it "should exist" do
-    assert User
+  
+  setup do
+    @user = User.new(first_name: "Test", last_name: "User", email: "test@user.com", phone_number: '11111111111')
   end
 
-  it "requires a first name" do
-    user = User.new
-    refute user.valid?
+  it "must be valid" do
+    refute @user.valid?
   end
+
 
 end
