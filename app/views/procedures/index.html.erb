@@ -1,16 +1,17 @@
-<p>
-	<ol>
-		<% @procedures.each do |proc| %>
-			<li>
-        <%= link_to proc.name, procedure_path(proc) %> 
-			</li>
-		<% end %>
-	</ol>
-</p>
-
-<p>
-  <% if is_user_admin?  %>
-    <%= link_to "New Procedure", new_procedure_path %>
-  <% end %>
-</p>
-
+<div class="container">
+  <p>
+  	<ol>
+  		<% @procedures.each do |proc| %>
+  			<li>
+          <%= link_to proc.name, procedure_path(proc) %> 
+  			</li>
+  		<% end %>
+  	</ol>
+  </p>
+  
+  <p>
+    <% if is_user_admin?  %>
+      <%= link_to "New Procedure", new_procedure_path %>
+    <% end %>
+  </p>
+</div>

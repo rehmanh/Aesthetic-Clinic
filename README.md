@@ -11,6 +11,14 @@
 
 ##### Issues / Notes
 
+###### Progress 06/30/2018
+- Updated Rails version to 5.1.6
+- added bootstrap and removed foundation
+- got Bootstrap to start working properly
+
+###### Useful links for Bootstrap:
+1. [Modals](jtway.co/5-steps-to-add-remote-modals-to-your-rails-app-8c21213b4d0c) 
+
 ###### Useful Links (for foundation):
 1. [Mircea Samuila](https://www.mirceasamuila.com/posts/bootstrap-modals-in-rails)
 2. [Rails creating modals](https://qiita.com/Kolosek/items/4ee80eb0c6dd0af4b1b7)
@@ -23,7 +31,6 @@
 
 ##### TODO:
 
-- Maybe try to work with Bootstrap instead of Foundation...ugh
 - Make sure that sign up modal button works from homepage
 - remove new patient button from Admin users' view page for users
 - add Modal for new appointment
