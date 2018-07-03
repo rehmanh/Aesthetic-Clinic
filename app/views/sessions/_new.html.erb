@@ -1,17 +1,13 @@
-<div class="row">
-  <div class="column">
-  <h1>Sign In</h1>
-  <%= form_tag(session_path) do %>
-  <form>
-    <ul>
-      <%= label_tag :email %>
-      <%= email_field_tag :email, nil, required: true %>
-      <%= label_tag :password %>
-      <%= password_field_tag :password, nil, required: true %>
-      <%= submit_tag 'Sign In', class: 'button' %>
-    </ul>
-      <%#= link_to 'Cancel', nil, class: 'alert button' %>
-  </form>
-  <%end %>
-  </div>
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">x</button>
+  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 </div>
+<div class="modal-body">
+  <p>This is a test to see if this view is even showing up or not.</p> 
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary">Save</button>
+</div>
+
+
+
