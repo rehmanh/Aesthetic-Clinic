@@ -5,10 +5,14 @@
 <%= form_tag(session_path) do %>
   <form>
     <ul>
-      <%= label_tag :email %>
-      <%= email_field_tag :email, nil, required: true %>
-      <%= label_tag :password %>
-      <%= password_field_tag :password, nil, required: true %>
+      <li>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil, required: true %>
+      </li>
+      <li>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil, required: true %>
+      </li>
     </ul>
     <p>
       <%= submit_tag 'Sign In', class: 'button success' %>

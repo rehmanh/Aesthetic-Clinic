@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
     respond_to do |format|
       format.html
-      format.js
+      format.js { render layout: false }
     end
   end
 
