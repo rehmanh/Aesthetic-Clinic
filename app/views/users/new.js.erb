@@ -1,11 +1,2 @@
-//$(document).foundation();
-//$('#signUpModal').html("<%= j render 'modal' %>");
-//$('#form_modal').foundation('reveal', 'open');
-//var mod = new Foundation.Reveal($('#form_modal'));
-//$("#myLink").click(function() { 
-//  $('#form_modal').foundation('reveal', 'open', "localhost:3000");
-//  mod.open();
-//});
-
-$("#modal-window").find(".modal-content").html("<%= escapse_javascript(render 'users/new') %>");
-$("#modal-window").modal(); //maybe try show here
+$("#modal-window").find(".modal-content").html("<%= j render 'shared/signup_modal' %>");
+$("#modal-window").modal('show');

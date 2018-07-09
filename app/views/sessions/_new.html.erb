@@ -1,17 +1,17 @@
-<header>
+<header class="container fullwidth heading">
   <h1>Sign In</h1>
 </header>
 
 <%= form_tag(session_path) do %>
   <form>
     <div class="form-group">
-      <%= label_tag :email %>
-      <%= email_field_tag :email, nil, required: true, placeholder: 'john@example.com' %>
+      <%= label_tag :email, nil, class: 'fullwidth' %><br>
+      <%= email_field_tag :email, nil, required: true, placeholder: 'john@example.com', class: 'fullwidth' %>
     </div>
     <div class="form-group">
-      <%= label_tag :password %>
-      <%= password_field_tag :password, nil, required: true, placeholder: 'Your password.' %>
+      <%= label_tag :password, nil, class: 'fullwidth' %><br>
+      <%= password_field_tag :password, nil, required: true, placeholder: 'Your password.', class: 'fullwidth' %>
     </div>
-    <%= submit_tag 'Sign In', class: 'btn btn-primary' %>
+    <%= submit_tag 'Sign In', class: 'btn btn-primary fullwidth' %>
   </form>
 <% end %>

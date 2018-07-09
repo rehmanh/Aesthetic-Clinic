@@ -31,12 +31,13 @@
 
 ##### TODO:
 
-- Make sure that sign up modal button works from homepage
+- Change default layout for Sign In modal
+- Make modal for sign up and apply Modal styles to that modal
+- Make custom Navbar (see old project for styles maybe)
 - remove new patient button from Admin users' view page for users
 - add Modal for new appointment
 - add modal for current user update
-- Read some of the links to figure out if we ave some redundant actions that we don't need
-- figure out how to add the rendered partials to the modal that appears
+- add image assets to homepage
 
 
 

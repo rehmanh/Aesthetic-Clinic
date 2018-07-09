@@ -27,11 +27,11 @@
 <p>
   <% if @user == current_user%>
     <% if !@user.has_max_appointments %>
-      <%= link_to "Schedule New Appointment", new_appointment_path, class: 'small button success' %>
+      <%= link_to "Schedule New Appointment", new_appointment_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
     <% end %>
     <br>
     <br>
-    <%= link_to "Edit Account", edit_user_path, class: 'button' %> 
+    <%= link_to "Edit Account", edit_user_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } %> 
     <%= link_to "Delete Account", root_url, class: 'alert button', method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' }  %>
   <% end %>
 </p>

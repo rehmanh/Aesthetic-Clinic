@@ -1,25 +1,58 @@
-<h1>Sign Up</h1>
+<% if @user.new_record? %>
+<header class="container fullwidth heading">
+  <h1>Sign Up</h1>
+</header>
+<% else %>
+<header class="container fullwidth heading">
+  <h1>Update Your Account</h1>
+</header>
+<% end %>
+
 <%= form_for(@user) do |u| %>
   <%= render 'shared/errors', object: @user %>
   <form>
-    <ul>
-        <%= u.label :first_name %>
-        <%= u.text_field :first_name, size: 40, autofocus: true, required: true %>
-        <%= u.label :last_name %>
-        <%= u.text_field :last_name, size: 40, required: true %>
-        <%= u.label :email %>
-        <%= u.email_field :email, size: 40, required: true %>
-        <%= u.label :phone_number %>
-        <%= u.text_field :phone_number, size: 40, required: true, type: "number" %>
-        <%= u.label :password %>
-        <%= u.password_field :password, size: 40, required: true %>
-        <%= u.label :password_confirmation %>
-        <%= u.password_field :password_confirmation, size: 40, required: true %>
-        <% if @user.new_record? %>
-          <%= u.submit "Create Account", class: 'button success' %>
-        <% else %>
-          <%= u.submit "Update Account", class: 'button' %>
+    <div class="form-group">
+        <%= u.label :first_name, nil %>
+        <% if @user.new_record?%>
+          <span class="required fullwidth">&nbsp;*</span><br>
         <%end%>
-    </ul>
+        <%= u.text_field :first_name, size: 40, autofocus: true, required: true, class: 'fullwidth' %>
+    </div>
+    <div class="form-group">
+        <%= u.label :last_name, nil %>
+        <% if @user.new_record? %>
+          <span class="required fullwidth">&nbsp;*</span><br>
+        <% end %>
+        <%= u.text_field :last_name, size: 40, required: true, class: 'fullwidth' %>
+    </div>
+    <div class="form-group">
+        <%= u.label :email, nil %>
+        <% if @user.new_record? %>
+        <span class="required fullwidth">&nbsp;*</span><br>
+        <% end %>
+        <%= u.email_field :email, size: 40, required: true, class: 'fullwidth' %>
+    </div>
+    <div class="form-group">
+        <%= u.label :phone_number, nil %>
+        <% if @user.new_record? %>
+          <span class="required fullwidth">&nbsp;*</span><br>
+        <% end %>
+        <%= u.text_field :phone_number, size: 40, required: true, type: "number", class: 'fullwidth' %>
+    </div>
+    <div class="form-group">
+        <%= u.label :password, nil %>
+        <span class="required fullwidth">&nbsp;*</span><br>
+        <%= u.password_field :password, size: 40, required: true, class: 'fullwidth' %>
+    </div>
+    <div class="form-group">
+        <%= u.label :password_confirmation, nil %>
+        <span class="required fullwidth">&nbsp;*</span><br>
+        <%= u.password_field :password_confirmation, size: 40, required: true, class: 'fullwidth' %>
+    </div>
+        <% if @user.new_record? %>
+          <%= u.submit "Create Account", class: 'btn btn-primary fullwidth' %>
+        <% else %>
+          <%= u.submit "Update Account", class: 'btn btn-primary fullwidth' %>
+        <%end%>
   </form>
 <% end %>

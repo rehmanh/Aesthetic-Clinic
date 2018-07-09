@@ -45,6 +45,10 @@ class UsersController < ApplicationController
       flash[:alert] = "Cannot perform that action"
       redirect_to @user
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update
