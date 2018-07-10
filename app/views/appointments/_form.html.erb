@@ -7,8 +7,18 @@
   <form>
     <div class="form-group">
       <%= f.label :appointment_date_time, nil, class: 'fullwidth' %><br>
-      <%= f.datetime_select :appointment_date_time, ampm: true, class: 'fullwidth' %>
+      <%= f.datetime_select :appointment_date_time, :id => "datetimepicker1" %>
     </div>
+    <script type="text/javascript">
+      $(function() {
+        $("#datetimepicker1").datetimepicker({
+          useCurrent: false,
+          sideBySide: true,
+          daysOfWeekDisabled: [0],
+          enabledHours: [15, 16, 17, 18, 19, 20, 21]
+        });
+      });
+    </script>
     <div class="form-group">
       <%= f.label :location, nil, class: 'fullwidth' %><br>
       <%= f.select :location, ['National Medical Center', 'Arif Medical Center'], :prompt => 'Select location', class: 'form-control fullwidth' %>

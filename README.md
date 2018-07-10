@@ -31,12 +31,7 @@
 
 ##### TODO:
 
-- Change default layout for Sign In modal
-- Make modal for sign up and apply Modal styles to that modal
 - Make custom Navbar (see old project for styles maybe)
-- remove new patient button from Admin users' view page for users
-- add Modal for new appointment
-- add modal for current user update
 - add image assets to homepage
 
 
