@@ -41,6 +41,10 @@ class AppointmentsController < ApplicationController
 
   def edit
     @appointment = @user.appointments.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update

@@ -11,28 +11,19 @@
 
 ##### Issues / Notes
 
-###### Progress 06/30/2018
-- Updated Rails version to 5.1.6
-- added bootstrap and removed foundation
-- got Bootstrap to start working properly
-
-###### Useful links for Bootstrap:
-1. [Modals](jtway.co/5-steps-to-add-remote-modals-to-your-rails-app-8c21213b4d0c) 
-
-###### Useful Links (for foundation):
-1. [Mircea Samuila](https://www.mirceasamuila.com/posts/bootstrap-modals-in-rails)
-2. [Rails creating modals](https://qiita.com/Kolosek/items/4ee80eb0c6dd0af4b1b7)
-3. [Reveal Modal | Foundation Docs](https://foundation.zurb.com/sites/docs/v/5.5.3/components/reveal.html)
-4. [Reveal 'Open' Method throwing JS error · Issue #8482 · zurb/foundation-sites · GitHub](https://github.com/zurb/foundation-sites/issues/8482)
-5. [[Reveal] $('#element').foundation('open') Does Not Open · Issue #9154 · zurb/foundation-sites · GitHub](https://github.com/zurb/foundation-sites/issues/9154)
-6. [Using AJAX in a Ruby on Rails (Demo, Source Code) - Tests4Geeks](https://tests4geeks.com/ajax-in-rails/)
+###### Progress 07/10/2018
+- Got modals to work
+- Made some progress on Layouts and views
+- Added date time picker.
 
 ---
 
-##### TODO:
+##### Backlog: 
 
-- Make custom Navbar (see old project for styles maybe)
-- add image assets to homepage
-
-
+Frontend Backlog | Backend Backlog
+---------------- | ---------------
+Make custom navbar (see old project for style guides) | Implement "Forgot your password" / password reset
+Add image assets to procedures and home page | Fix appointment validations
+Make procedures modals | Maybe send out mailers when appointment is scheduled.
+Make footer that stays across pages (sticky footer) | 
 

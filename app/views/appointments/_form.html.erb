@@ -1,6 +1,12 @@
+<% if @appointment.new_record? %>
 <header class="container fullwidth heading">
   <h1>Schedule An Appointment</h1>
 </header>
+<% else %>
+  <header class="container fullwidth heading">
+    <h1>Update Your Appointment</h1>
+  </header>
+<% end %>
 
 <%= form_for(@appointment) do |f| %>
   <%= render "shared/errors", object: @appointment %>
@@ -10,18 +16,27 @@
       <%= f.datetime_select :appointment_date_time, :id => "datetimepicker1" %>
     </div>
     <script type="text/javascript">
+      var d = new Date();
+      d.setHours(15, 0, 0);
+      
       $(function() {
         $("#datetimepicker1").datetimepicker({
           useCurrent: false,
+          defaultDate: d,
           sideBySide: true,
           daysOfWeekDisabled: [0],
-          enabledHours: [15, 16, 17, 18, 19, 20, 21]
+          enabledHours: [15, 16, 17, 18, 19, 20],
+          stepping: 15
         });
       });
     </script>
     <div class="form-group">
       <%= f.label :location, nil, class: 'fullwidth' %><br>
-      <%= f.select :location, ['National Medical Center', 'Arif Medical Center'], :prompt => 'Select location', class: 'form-control fullwidth' %>
+      <%= f.select :location, options_for_select([
+        ["Select Location", ""],
+        "National Medical Center",
+        "Arif Medical Center"]),
+        {}, { class: "form form-group form-control" } %> 
     </div>
     <div class="form-group">
       <%= f.label :complaint, nil, class: 'fullwidth' %><br>

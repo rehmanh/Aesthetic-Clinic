@@ -13,8 +13,8 @@
         Date: <%= format_date(appt.appointment_date_time)  %> <br>
         Time: <%= format_time(appt.appointment_date_time) %> <br>
       <% if@user == current_user %>
-        <%= link_to "Edit Appointment", edit_appointment_path(appt), class: 'small button' %>
-        <%= link_to "Cancel Appointment", appointment_path(appt), class: 'small alert button', method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+        <%= link_to "Edit Appointment", edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
+        <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
       <% end %>
       <br>
     <% end %>
