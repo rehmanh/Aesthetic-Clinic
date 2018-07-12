@@ -23,7 +23,9 @@
 Frontend Backlog | Backend Backlog
 ---------------- | ---------------
 Make custom navbar (see old project for style guides) | Implement "Forgot your password" / password reset
-Add image assets to procedures and home page | Fix appointment validations
+Add image assets to procedures and home page | ~~Fix appointment validations~~
 Make procedures modals | Maybe send out mailers when appointment is scheduled.
 Make footer that stays across pages (sticky footer) | 
+~~Make custom flash messages~~ |
+Fix error reporting on form modals |
 

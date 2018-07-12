@@ -41,6 +41,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 gem 'hamburgers'
 
+gem 'validates_timeliness', '~> 5.0.0.alpha2'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'minitest-rails'

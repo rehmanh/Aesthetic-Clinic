@@ -4,18 +4,5 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
+//= require alerts
 //= require_tree . 
-
-// $(function(){ $(document).foundation(); });
-// 
-// $(function($) {
-//   $(document).ready(function() {
-//     $('.hamburger').toggleClass('is-active');
-//   });
-// });
-// 
-// $(function($) {
-//   $('.hamburger').click(function() {
-//     $('.hamburger').toggleClass('is-active');
-//   });
-// });

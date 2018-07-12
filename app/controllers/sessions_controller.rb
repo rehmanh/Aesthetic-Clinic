@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:notice] = "Sign out successful."
-    redirect_to procedures_url
+    redirect_to root_url
   end
 
 end
