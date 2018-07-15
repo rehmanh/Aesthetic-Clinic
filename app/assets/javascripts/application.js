@@ -5,4 +5,5 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require alerts
+//= require navbar
 //= require_tree . 

@@ -1,8 +1,11 @@
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "bootstrap-datetimepicker";
- @import "modal";
- @import "alerts";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
+@import "modal";
+@import "alerts";
+@import "navbar";
+@import "hamburgers/dist/hamburgers.css";
+@import "hamburgers/dist/hamburgers.min.css";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -19,3 +22,12 @@
  *= require_self
  *= require_tree .
 */
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+}

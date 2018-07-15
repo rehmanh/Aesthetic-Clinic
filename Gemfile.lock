@@ -63,7 +63,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    hamburgers (0.9.3)
+    hamburgers (0.8.1)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -181,7 +181,7 @@ DEPENDENCIES
   bootstrap3-datetimepicker-rails (~> 4.17.47)
   byebug
   coffee-rails (~> 4.2)
-  hamburgers
+  hamburgers (~> 0.8.0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
