@@ -5,8 +5,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background-color: black;
-  opacity: 0.2;
+  background: rgba(128, 128, 128, 1.0);
   transition: width 0.3s;
 }
 
@@ -16,5 +15,4 @@
   padding: 0;
   transition: width 0.3s;
 }
-
 
