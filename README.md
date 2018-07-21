@@ -28,7 +28,7 @@ Make procedures modals | Maybe send out mailers when appointment is scheduled.
 Make footer that stays across pages (sticky footer) | 
 ~~Make custom flash messages~~ |
 Fix error reporting on form modals |
-Make hamburger menu consistent with sidebar |
-Add button links to sidebar |
+~~Make hamburger menu consistent with sidebar~~ |
+~~Add button links to sidebar~~ |
 Make colorscheme for site (start with sidebar) |
 

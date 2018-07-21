@@ -1,34 +1,40 @@
 $(document).on('turbolinks:load', function() {
-  
- //  var num_clicks = 0;
+ 
+  var is_toggled = false;
 
- //  $("#menuHamburger").click(function() {
- //    $(this).toggleClass("is-active");
- //    if (num_clicks % 2 == 0) {
- //      $(this).animate({
- //        marginLeft: '20%'
- //      });
- //    } else {
- //      $(this).animate({
- //        marginLeft: '0'
- //      });
- //    }
- //    $("#sideBar").toggleClass("minimized");  
- //    ++num_clicks;
- //  });
-
-  $("#menuHamburger").click(function() {
-    $(this).toggleClass("is-active");
-    $(this).css('visibility', 'hidden');
-    $("#sideHamburger").toggleClass("is-active");
-    $("#sideBar").toggleClass("minimized");
+  $(window).resize(function() {
+    if ($(window).width() < 992 && is_toggled) { // if window is resized and sidebar is showed
+      $("#sideBar").css("width", "100%");
+    } else if ($(window).width() > 992 && is_toggled) { // if window is resized from mobile and sidebar is showed
+      $("#sideBar").css("width", "25%");
+    }
   });
 
-  $("#sideHamburger").click(function() {  
+  function showSidebar() {
+    if ($(window).width() < 992) { 
+      $("#sideBar").css("width", "100%");
+    } else {
+      $("#sideBar").css("width", "25%");
+    }
+  }
+
+  function hideSidebar() {
+    $("#sideBar").css("width", "0");
+  }
+
+
+  $("#menuHamburger").click(function() {
+    is_toggled = true;
     $(this).toggleClass("is-active");
-    $("#menuHamburger").css('visibility', 'visible');
+    $("#sideHamburger").toggleClass("is-active");
+    showSidebar();
+  });
+
+  $("#sideHamburger").click(function() {
+    is_toggled = false;
+    $(this).toggleClass("is-active");
     $("#menuHamburger").toggleClass("is-active");
-    $("#sideBar").toggleClass("minimized");
+    hideSidebar();
   });
 
 });

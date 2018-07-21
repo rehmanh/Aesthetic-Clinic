@@ -1,7 +1,35 @@
-<div class="col-md-3 sidebar minimized" id="sideBar">
+<div class="sidebar" id="sideBar"> <!-- removed col-md-3 and minimized classes -->
+  
   <div class="hamburger hamburger--collapse" id="sideHamburger" style="float: right; position: relative;">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
   </div>
+
+  <div class="sidebar-content">
+    <ul class="list-group" id="sidebar-links">
+      <%= link_to root_path do%>
+        <li class="nav-button"> Testing Link To Tag </li>
+      <% end %>
+      <%= link_to root_path do %>
+        <li class="nav-button"> Dedicated To Phone Sex </li>
+      <% end %>
+      <% if current_user %>
+        <%= link_to current_user do %>
+          <li class="nav-button">Your Profile</li>
+        <% end %>
+        <%= link_to session_path do %>
+          <li class="nav-button">Sign Out</li>
+        <% end %>
+      <% else %>
+        <%= link_to new_session_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>
+          <li class="nav-button">Sign In</li>
+        <% end %>
+        <%= link_to new_user_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>
+          <li class="nav-button">Sign Up</li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
 </div>
