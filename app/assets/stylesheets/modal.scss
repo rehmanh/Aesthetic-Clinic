@@ -4,6 +4,7 @@ input {
 
 .fullwidth {
   width: 100%;
+  border-radius: 0px;
 }
 
 .heading {
@@ -20,3 +21,8 @@ input {
 .close-modal {
   font-size: 30px;
 }
+
+.modal-content {
+  border-radius: 0px;
+}
+

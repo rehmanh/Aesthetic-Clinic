@@ -18,7 +18,7 @@
         <%= link_to current_user do %>
           <li class="nav-button">Your Profile</li>
         <% end %>
-        <%= link_to session_path do %>
+        <%= link_to session_path, method: :delete do %>
           <li class="nav-button">Sign Out</li>
         <% end %>
       <% else %>
