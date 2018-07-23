@@ -24,13 +24,19 @@ Frontend Backlog | Backend Backlog
 ---------------- | ---------------
 ~~Make custom navbar (see old project for style guides)~~ | Implement "Forgot your password" / password reset
 Add image assets to procedures and home page | ~~Fix appointment validations~~
-Make procedures modals | Maybe send out mailers when appointment is scheduled.
-~~Make footer that stays across pages (sticky footer)~~ | 
-~~Make custom flash messages~~ |
-Fix error reporting on form modals |
-~~Make hamburger menu consistent with sidebar~~ |
-~~Add button links to sidebar~~ |
-Make colorscheme for site (start with sidebar) |
-Make procedures a grid of images that pop out into Modals [like this](jadlimcaco.com/work) |
+~~Make procedures modals~~ | Maybe send out mailers when appointment is scheduled.
+~~Make footer that stays across pages (sticky footer)~~ | Remove Complaint from Appointments
+~~Make custom flash messages~~ | Have a "Treatment?" or "Consultation" option for Patients
+Fix error reporting on form modals | Consider adding record number column for users
+~~Make hamburger menu consistent with sidebar~~ | look at how to send texts to users
+~~Add button links to sidebar~~ | ADMC only on Fridays
+Make colorscheme for site (start with sidebar) | Figure out how to make website better at crawling
+~~Make procedures a grid of images that pop out into Modals [like this](jadlimcaco.com/work)~~ |
 Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) |
-
+Make procedure modals show only 6 at first with a 'View More Button' |
+Add Styling to User Profile Page |
+Add content to Footer |
+Fix behavior of sidebar on Turbolinks |
+Add 2 nice consistent font families |
+Add image assets and descriptions for procedures |
+Make procedure images show the name on Hover for large viewports and show the name under them for small viewports |

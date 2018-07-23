@@ -5,10 +5,8 @@
   <header class="container fullwidth heading">
     <h1><%= @procedure.name %></h1>
   </header>
-
-  <div class="container">
-    <p><%= @procedure.description %></p>
-  </div> 
+  <p><%= @procedure.description %></p>
+  
   <div>
    <p>
     <% if is_user_admin? %>

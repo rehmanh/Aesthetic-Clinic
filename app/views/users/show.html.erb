@@ -1,30 +1,35 @@
-<h2><%= user_name(@user) %></h2>
+<div class="container">
+  <div class="row">
+    <header class="display-12">
+      <h2>Your Profile</h2>
+      <hr>
+    </header>
 
-<div>
-  <h3>Email</h3>
-  <p> <%= @user.email %> </p>
-  <h3>Phone Number</h3>
-  <p> <%= @user.phone_number %> </p>
-  <h3>Upcoming Appointments</h3> 
-  <% if @appointments.exists? %>
-    <ul>
-    <% @appointments.each do |appt| %>
-        Location: <%= appt.location %> <br>
-        Date: <%= format_date(appt.appointment_date_time)  %> <br>
-        Time: <%= format_time(appt.appointment_date_time) %> <br>
-      <% if@user == current_user %>
-        <%= link_to "Edit Appointment", edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
-        <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+    <div class="col-lg-4 col-md-6 col-xs-6">
+      <h3>Email</h3>
+      <p> <%= @user.email %> </p>
+      <h3>Phone Number</h3>
+      <p> <%= @user.phone_number %> </p>
+      <h3>Upcoming Appointments</h3> 
+      <% if @appointments.exists? %>
+        <ul>
+        <% @appointments.each do |appt| %>
+          Location: <%= appt.location %> <br>
+          Date: <%= format_date(appt.appointment_date_time)  %> <br>
+          Time: <%= format_time(appt.appointment_date_time) %> <br>
+        <% if@user == current_user %>
+          <%= link_to "Edit Appointment", edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
+          <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
+        <% end %>
+        <br>
+        <% end %>
+        </ul>
+      <% else %>
+      <p>You do not have any upcoming appointments.</p>
       <% end %>
-      <br>
-    <% end %>
-    </ul>
-  <% else %>
-    <p>You do not have any upcoming appointments.</p>
-  <% end %>
-</div>
-
-<p>
+    </div>
+  
+  <p>
   <% if @user == current_user%>
     <% if !@user.has_max_appointments %>
       <%= link_to "Schedule New Appointment", new_appointment_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
@@ -36,4 +41,5 @@
   <% end %>
 </p>
 
-
+  </div>
+</div>
