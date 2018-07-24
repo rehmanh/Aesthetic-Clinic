@@ -32,11 +32,15 @@ Fix error reporting on form modals | Consider adding record number column for us
 ~~Add button links to sidebar~~ | ADMC only on Fridays
 Make colorscheme for site (start with sidebar) | Figure out how to make website better at crawling
 ~~Make procedures a grid of images that pop out into Modals [like this](jadlimcaco.com/work)~~ |
-Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) |
+Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) | 
 Make procedure modals show only 6 at first with a 'View More Button' |
-Add Styling to User Profile Page |
+~~Add Styling to User Profile Page~~ |
 Add content to Footer |
 Fix behavior of sidebar on Turbolinks |
 Add 2 nice consistent font families |
 Add image assets and descriptions for procedures |
 Make procedure images show the name on Hover for large viewports and show the name under them for small viewports |
+Fix appointments view in User Show Page |
+Add link in sidebar and styling for user index page |
+
+

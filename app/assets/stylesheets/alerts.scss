@@ -1,8 +1,10 @@
 .custom-alert {
+  z-index: 5;
   position: fixed;
-  bottom: 5px;
+  top: 25px;
   left: 2%;
   width: 96%;
-  opacity: 0.8;
+  opacity: 1.0;
+  border-radius: 0px;
 }
 

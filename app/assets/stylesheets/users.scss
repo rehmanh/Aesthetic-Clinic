@@ -1,3 +1,41 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile {
+  background-color: rgba(240, 240, 240, 0.7);
+  padding: 25px;
+  margin-top: 1.5rem!important;
+  margin-bottom: 1.5rem!important;
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all .2s ease-in-out;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+}
+
+.user-button {
+  border-radius: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.edit-button {
+  background-color: rgba(19, 154, 255, 1.0);
+  color: white;
+}
+
+#editBtn:hover {
+  text-decoration: none;
+}
+
+.appointment {
+  background-color: white;
+  padding: 5px;
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
