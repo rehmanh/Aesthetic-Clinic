@@ -1,15 +1,27 @@
-<h2>Patient Records</h2>
+<div class="container">
+  <div class="row">
+  	<table class="table table-hover">
+  		<thead>
+  		  <tr>
+  		    <th scope="col">User ID</th>
+  		    <th scope="col">First Name</th>
+  		    <th scope="col">Last Name</th>
+  		    <th scope="col">Phone Number</th>
+  		  </tr>
+  		</thead>
+  		<tbody>
+        <% @users.each do |user| %>
+  		    <tr>
+  		      <th scope="row"> <%= user.id %> </th>
+  		      <td><%= link_to(user.first_name, user_path(user)) %></td>
+  		      <td><%= link_to(user.last_name, user_path(user)) %></td>
+  		      <td><%= user.phone_number %></td>
+  		    </tr>
+        <% end %>
+  		</tbody>
+		</table> 
+  </div>
+</div>
 
-<p>
-  <ul>
-    <% @users.each do |user| %>
-    <li> <%= link_to(user_name(user), user_path(user))  %> </li>
-    <% end %>
-  </ul>
-</p>
-
-<%#= link_to "New Patient", new_user_path, id: 'myLink', remote: true %>
-
-<div id="signUpModal"></div>
 
 

@@ -13,6 +13,7 @@
     <div class="col-md-6">
       <div class="profile">
         <h3 class="text-center">Personal Information</h3>
+        <hr>
         <h3>Name</h3>
         <p> <span class="glyphicon glyphicon-user"></span>  <%= user_name(@user) %> </p>
         <h3>Email</h3>
@@ -20,11 +21,12 @@
         <h3>Phone Number</h3>
         <p> <span class="glyphicon glyphicon-earphone"></span> <%= @user.phone_number %> </p>
         <% if @user == current_user %>
+          <hr>
           <div class="text-center">
-            <%= link_to edit_user_path, remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editBtn' do %>
-              <button class="btn edit-button user-button">Edit Account</button>
+            <%= link_to edit_user_path, remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editAccountBtn' do %>
+              <button class="btn btn-warning user-button">Edit Account</button>
             <% end %>
-            <%= link_to root_url, method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' }, class: 'button' do %>
+            <%= link_to root_url, method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' } do %>
               <button class="btn btn-danger user-button">Delete Account</button>
             <% end %>
           </div>
@@ -35,27 +37,37 @@
     <div class="col-md-6">
       <div class="profile">
         <h3 class="text-center">Upcoming Appointments</h3> 
+        <hr>
         <% if @appointments.exists? %>
           <% @appointments.each do |appt| %>
             <div class="appointment">
-              <strong>Location:</strong> <%= appt.location %> <br>
-              <strong>Date:</strong> <%= format_date(appt.appointment_date_time)  %> <br>
-              <strong>Time:</strong> <%= format_time(appt.appointment_date_time) %> <br>
-          <% if@user == current_user %>
-            <%= link_to "Edit Appointment", edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
-            <%= link_to "Cancel Appointment", appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } %>
-          <% end %>
-          </div>
+              <p>
+              <strong style="font-size: 1.1em;">Location:</strong> <%= appt.location %> <br>
+              <strong style="font-size: 1.1em;">Date:</strong> <%= format_date(appt.appointment_date_time)  %> <br>
+              <strong style="font-size: 1.1em;">Time:</strong> <%= format_time(appt.appointment_date_time) %> <br>
+              </p>
+              <% if@user == current_user %>
+                <div class="text-center">
+                  <%= link_to edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editApptBtn' do %>
+                    <button class="btn btn-warning user-button" style="margin-bottom: 1.5rem!important; ">Edit Appointment</button>
+                  <% end %>
+                  <%= link_to appointment_path(appt), method: :delete, data: { confirm: 'Are you sure you want to cancel this appointment?' } do %>
+                    <button class="btn btn-danger user-button" style="margin-bottom: 1.5rem!important; ">Cancel Appointment</button>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
           <% end %>
           <br>
         <% else %>
           <p class="text-center">You do not have any upcoming appointments. Request an appointment below, and we'll get back to you with confirmation!</p>
         <% end %>
+        <hr>
         <% if @user == current_user %>
           <% if !@user.has_max_appointments %>
             <div class="text-center">
               <%= link_to new_appointment_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>
-                <button class="btn user-button edit-button">Schedule A New Appointment</button>
+                <button class="btn user-button account-button" >Schedule A New Appointment</button>
               <% end %>
             </div>
           <% end %>

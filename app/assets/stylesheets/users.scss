@@ -5,6 +5,7 @@
 .profile {
   background-color: rgba(240, 240, 240, 0.7);
   padding: 25px;
+  text-align: center;
   margin-top: 1.5rem!important;
   margin-bottom: 1.5rem!important;
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -23,19 +24,28 @@
   margin-right: 5px;
 }
 
-.edit-button {
+.account-button {
   background-color: rgba(19, 154, 255, 1.0);
   color: white;
 }
 
-#editBtn:hover {
+#editAccountBtn:hover {
+  text-decoration: none;
+}
+
+#editApptBtn:hover {
   text-decoration: none;
 }
 
 .appointment {
   background-color: white;
-  padding: 5px;
-  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 1.5rem!important;
+  width: 75%;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
