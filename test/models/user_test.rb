@@ -49,5 +49,9 @@ describe User do
     assert @user.valid?
   end
 
+  it "should be able to have appointments" do
+    t = User.reflect_on_association(:appointments)
+    assert_equal t.macro, :has_many
+  end
 
 end

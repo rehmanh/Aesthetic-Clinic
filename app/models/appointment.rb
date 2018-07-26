@@ -7,7 +7,24 @@ class Appointment < ApplicationRecord
     maximum: 200, 
     too_long: "description cannot exceed 200 characters."
   }
+  validates_time :appointment_date_time, :between => ['3:00pm', '9:00pm'], 
+                                         :message => 'must be between 3pm and 9pm.'
   validates_datetime :appointment_date_time, :after => lambda { DateTime.now.in_time_zone('UTC') }, 
                                              :after_message => 'must not be in the past.'
 
- end
+  validate :correct_location
+  validates_uniqueness_of :appointment_date_time
+
+  Locations = [
+    "National Medical Center",
+    "Arif Defence Medical Center"
+  ]
+
+  private
+
+  def correct_location
+    errors.add(:location, "is not valid for an appointment") unless
+      Locations.include?(location)
+  end
+
+end
