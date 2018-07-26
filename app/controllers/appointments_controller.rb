@@ -5,7 +5,9 @@ class AppointmentsController < ApplicationController
   before_action :require_admin_rights, only: [:index]
 
   def index
-    @appointments = Appointment.all
+    @all_appointments = Appointment.all
+    @upcoming_appointments = Appointment.upcoming
+    @past_appointments = Appointment.past
   end
 
   def new

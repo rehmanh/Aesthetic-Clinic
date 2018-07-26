@@ -7,6 +7,8 @@ $(document).on('turbolinks:load', function() {
       $("#sideBar").css("width", "100%");
     } else if ($(window).width() > 992 && is_toggled) { // if window is resized from mobile and sidebar is showed
       $("#sideBar").css("width", "25%");
+    } else {
+      hideSidebar();
     }
   });
 
@@ -34,6 +36,10 @@ $(document).on('turbolinks:load', function() {
     is_toggled = false;
     $(this).toggleClass("is-active");
     $("#menuHamburger").toggleClass("is-active");
+    hideSidebar();
+  });
+  
+  $(".nav-button").click(function() { // operating under the assumption that all the links work properly
     hideSidebar();
   });
 

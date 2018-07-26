@@ -33,8 +33,8 @@ Fix error reporting on form modals | Consider adding record number column for us
 Make colorscheme for site (start with sidebar) | Figure out how to make website better at crawling
 ~~Make procedures a grid of images that pop out into Modals [like this](jadlimcaco.com/work)~~ | ~~WRITE TESTS~~
 Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) | Consider adding Local Users that won't be affected by the current User Profile page 
-Make procedure modals show only 6 at first with a 'View More Button' |
-~~Add Styling to User Profile Page~~ |
+Make procedure modals show only 6 at first with a 'View More Button' | Fix has many associations length b/w user and appointments
+~~Add Styling to User Profile Page~~ | Make a nice seedfile
 Add content to Footer |
 Fix behavior of sidebar on Turbolinks |
 Add 2 nice consistent font families |
@@ -42,3 +42,4 @@ Add image assets and descriptions for procedures |
 Make procedure images show the name on Hover for large viewports and show the name under them for small viewports |
 ~~Fix appointments view in User Show Page~~ |
 ~~Add link in sidebar and styling for user index page~~ |
+Add appointments index page for admin users |

@@ -13,11 +13,12 @@ class User < ApplicationRecord
     with: /((\+92)|(0092)|(03\d{2}))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}/, 
     message: "entered is not valid. Please either enter your whole phone number, or separated by dashes ('-')." 
   }
-  validates :appointments, length: { maximum: 2 }
+
+  validates_length_of :appointments, maximum: 2
 
   def has_max_appointments
-    errors.add(:appointments, "limit exceeded.") if
-      appointments.count >= 2
+    errors.add(:appointments, "limit exceeded. You cannot schedule more than two active appointments at once.") if
+      appointments.size >= 2
   end
 
 end

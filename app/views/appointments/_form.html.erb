@@ -35,14 +35,18 @@
       <%= f.select :location, options_for_select([
         ["Select Location", ""],
         "National Medical Center",
-        "Arif Medical Center"]),
+        "Arif Defence Medical Center"]),
         {}, { class: "form form-group form-control" } %> 
     </div>
     <div class="form-group">
       <%= f.label :complaint, nil, class: 'fullwidth' %><br>
       <%= f.text_area :complaint, cols: 40, rows: 7, class: 'fullwidth' %>
     </div>
-    <%= f.submit "Schedule Appointment", class: 'btn btn-primary fullwidth' %>
+      <% if @appointment.new_record? %>
+        <%= f.submit "Schedule Appointment", class: 'btn btn-primary fullwidth' %>
+      <% else %>
+        <%= f.submit "Update Appointment", class: 'btn btn-primary fullwidth' %>
+      <% end %>
   </form>
 <% end %>
 
