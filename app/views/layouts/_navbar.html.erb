@@ -1,5 +1,5 @@
 <div class="sidebar" id="sideBar"> <!-- removed col-md-3 and minimized classes -->
-  
+
   <div class="hamburger hamburger--collapse" id="sideHamburger" style="float: right; position: relative;">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
@@ -9,23 +9,23 @@
   <div class="sidebar-content">
     <ul class="list-group" id="sidebar-links">
       <%= link_to root_path do%>
-        <li class="nav-button"> Testing Link To Tag </li>
+        <li class="nav-button nonmodal"> Testing Link To Tag </li>
       <% end %>
       <%= link_to root_path do %>
-        <li class="nav-button"> Dedicated To Phone Sex </li>
+        <li class="nav-button nonmodal"> Dedicated To Phone Sex </li>
       <% end %>
       <% if is_user_admin? %>
         <%= link_to users_path do %>
-          <li class="nav-button">All Patients</li>
+          <li class="nav-button nonmodal">All Patients</li>
         <% end %>
       <% end %>
       <hr>
       <% if current_user %>
         <%= link_to current_user do %>
-          <li class="nav-button">Your Profile</li>
+          <li class="nav-button nonmodal">Your Profile</li>
         <% end %>
         <%= link_to session_path, method: :delete do %>
-          <li class="nav-button">Sign Out</li>
+          <li class="nav-button nonmodal">Sign Out</li>
         <% end %>
       <% else %>
         <%= link_to new_session_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>

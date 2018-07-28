@@ -35,8 +35,8 @@ Make colorscheme for site (start with sidebar) | Figure out how to make website 
 Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) | Consider adding Local Users that won't be affected by the current User Profile page 
 Make procedure modals show only 6 at first with a 'View More Button' | Fix has many associations length b/w user and appointments
 ~~Add Styling to User Profile Page~~ | Make a nice seedfile
-Add content to Footer |
-Fix behavior of sidebar on Turbolinks |
+Add content to Footer | Add record number field to users table
+Fix behavior of sidebar on Turbolinks | Search bar for users
 Add 2 nice consistent font families |
 Add image assets and descriptions for procedures |
 Make procedure images show the name on Hover for large viewports and show the name under them for small viewports |

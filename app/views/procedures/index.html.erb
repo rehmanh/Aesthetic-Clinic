@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row text-center text-lg-left">
     <% @procedures.each do |p| %>
-      <div class="col-lg-4 col-md-6 col-xs-6">
-        <%= link_to p, remote: true, data: { toggle: 'modal', target: 'modal-window' }, class: 'd-block mb-4 h-100' do %>
+      <div class="col-lg-4 col-md-6 col-xs-6 mb-4">
+        <%= link_to p, remote: true, data: { toggle: 'modal', target: 'modal-window' }, class: 'd-block h-100' do %>
           <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300">
         <% end %>
+        <span style="padding-bottom: 1.5rem!important;"><%= p.name %></span>
       </div>
     <% end %> 
   </div>

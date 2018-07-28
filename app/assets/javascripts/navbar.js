@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function() {
     hideSidebar();
   });
   
-  $(".nav-button").click(function() { // operating under the assumption that all the links work properly
+  $(".nonmodal").click(function() { // operating under the assumption that all the links work properly
     hideSidebar();
   });
 
