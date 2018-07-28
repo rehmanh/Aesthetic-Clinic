@@ -24,7 +24,9 @@
       <% end %>
 
       <div class="row nav-area">
-        <%= image_tag "menubar-logo.png", class: 'menu-icon' %>
+        <%= link_to root_url do %>
+          <%= image_tag "menubar-logo.png", class: 'menu-icon' %>
+        <% end %>
 	  	  <div class="hamburger hamburger--collapse" id="menuHamburger" style="float: left;">
     	  	<div class="hamburger-box">
         		<div class="hamburger-inner"></div>
