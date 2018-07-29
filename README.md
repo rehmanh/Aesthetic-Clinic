@@ -36,10 +36,10 @@ Add "Request An Appointment Today" section on Homepage [like this](advanceddhcar
 Make procedure modals show only 6 at first with a 'View More Button' | Fix has many associations length b/w user and appointments
 ~~Add Styling to User Profile Page~~ | Make a nice seedfile
 Add content to Footer | Add record number field to users table
-Fix behavior of sidebar on Turbolinks | Search bar for users
+~~Fix behavior of sidebar on Turbolinks~~ | Search bar for users
 Add 2 nice consistent font families |
 Add image assets and descriptions for procedures |
-Make procedure images show the name on Hover for large viewports and show the name under them for small viewports |
+~~Make procedure images show the name on Hover for large viewports and show the name under them for small viewports~~ |
 ~~Fix appointments view in User Show Page~~ |
 ~~Add link in sidebar and styling for user index page~~ |
 Add appointments index page for admin users |

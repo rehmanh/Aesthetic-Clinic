@@ -59,7 +59,7 @@
 .menu-icon {
   margin-left: auto;
   height: 59px;
-  width: 69px;
+  width: 70px;
   margin-right: auto;
   border-right: 1px solid #eeeeee; 
   border-left: 1px solid #eeeeee; 
@@ -67,4 +67,13 @@
 
 .half-logo {
   width: 100%;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 1.5rem!important;
+}
+
+@media screen and ( max-height: 600px ) {
+  .half-logo {
+    display: none;
+  }
 }
