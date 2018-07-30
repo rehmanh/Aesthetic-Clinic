@@ -1,7 +1,17 @@
-<header>
-  <h1>All Appointments</h1>
-</header>
-<body>
+<div class="container">
+  <div class="row">
+    
+    <header class="display-12">
+      <h2>Appointments</h2>
+    </header>
+
+  </div>
+</div>
+
+<!-- all_appointments -->
+<!-- upcoming_appointments -->
+<!-- past_appointments -->
+
   <% if @appointments.nil? %>
     There seems to be nothing here.
   <% else %>
@@ -18,4 +28,3 @@
     <% end %>
     </ul>
   <% end %>
-</body>
