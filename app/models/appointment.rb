@@ -16,8 +16,8 @@ class Appointment < ApplicationRecord
   validate :correct_location
   validates_uniqueness_of :appointment_date_time
 
-  scope :upcoming, -> { where("appointment_date_time > ? AND completed = ?", DateTime.now.in_time_zone('UTC'), false) }
-  scope :past, -> { where("appointment_date_time < ? AND completed = ?", DateTime.now.in_time_zone('UTC'), true) }
+  scope :upcoming, -> { where("appointment_date_time > ?", DateTime.now.in_time_zone('UTC')) }
+  scope :past, -> { where("appointment_date_time < ?", DateTime.now.in_time_zone('UTC')) }
 
   Locations = [
     "National Medical Center",
@@ -30,11 +30,5 @@ class Appointment < ApplicationRecord
     errors.add(:location, "is not valid for an appointment") unless
       Locations.include?(location)
   end
-
-  def self.expire_appointments
-    if self.appointment_date_time < DateTime.now.in_time_zone('UTC')
-      self.completed = true
-    end
-  end
-
+  
 end

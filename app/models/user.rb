@@ -14,11 +14,9 @@ class User < ApplicationRecord
     message: "entered is not valid. Please either enter your whole phone number, or separated by dashes ('-')." 
   }
 
-  validates_length_of :appointments, maximum: 2
-
   def has_max_appointments
     errors.add(:appointments, "limit exceeded. You cannot schedule more than two active appointments at once.") if
-      appointments.size >= 2
+      appointments.upcoming.size >= 2
   end
 
 end

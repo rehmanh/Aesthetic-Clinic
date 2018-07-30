@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @appointments = @user.appointments 
+    @appointments = @user.appointments.upcoming
   end
 
   def new
