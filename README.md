@@ -11,10 +11,10 @@
 
 ##### Issues / Notes
 
-###### Progress 07/10/2018
-- Got modals to work
-- Made some progress on Layouts and views
-- Added date time picker.
+###### Progress 07/31/2018
+- Is a record number always unique?
+- Can one patient have more than one record number
+- Do I want to create association between the users that create their own accounts and the patients that are recorded internally?
 
 ---
 
@@ -37,7 +37,7 @@ Make procedure modals show only 6 at first with a 'View More Button' | Fix has m
 ~~Add Styling to User Profile Page~~ | Make a nice seedfile
 Add content to Footer | Add record number field to users table
 ~~Fix behavior of sidebar on Turbolinks~~ | Search bar for users
-Add 2 nice consistent font families |
+Add 2 nice consistent font families | create PatientRecord table and associate with Users
 Add image assets and descriptions for procedures |
 ~~Make procedure images show the name on Hover for large viewports and show the name under them for small viewports~~ |
 ~~Fix appointments view in User Show Page~~ |

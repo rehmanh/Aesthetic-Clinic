@@ -11,8 +11,9 @@ class User < ApplicationRecord
   }  
   validates :phone_number, format: { 
     with: /((\+92)|(0092)|(03\d{2}))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}/, 
-    message: "entered is not valid. Please either enter your whole phone number, or separated by dashes ('-')." 
+    message: "entered is not valid. Please enter your entire mobile phone number, or separated by dashes ('-')." 
   }
+  validates :password, length: { minimum: 8, maximum: 32 }, on: :create
 
   def has_max_appointments
     errors.add(:appointments, "limit exceeded. You cannot schedule more than two active appointments at once.") if
