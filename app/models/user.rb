@@ -1,6 +1,8 @@
 class User < ApplicationRecord
  
   has_many :appointments, dependent: :destroy
+  has_one :patient_record, as: :recordable
+  # accepts_nested_attributes_for :patient_record
   has_secure_password
 
   validates :first_name, presence: true

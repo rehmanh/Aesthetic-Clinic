@@ -23,6 +23,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) 
     if @user.save
+      @user.build_patient_record(
+        first_name: @user.first_name,
+        last_name: @user.last_name, 
+        phone_number: @user.phone_number, 
+        email: @user.email
+      ).save
       session[:user_id] = @user.id
       flash[:notice] = "Your account was successfully created."
       redirect_to @user
@@ -64,7 +70,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    user_params = params.require(:user).permit!
+    user_params = params.require(:user).permit(:first_name, :last_name, :email, :phone_number, :password)
   end
 
   def require_correct_user

@@ -1,0 +1,2 @@
+module PatientRecordHelper
+end

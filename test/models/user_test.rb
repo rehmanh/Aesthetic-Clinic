@@ -54,4 +54,9 @@ describe User do
     assert_equal t.macro, :has_many
   end
 
+  it "should have one patient record" do
+    record = User.reflect_on_association :patient_record
+    assert_equal record.macro, :has_one
+  end
+
 end
