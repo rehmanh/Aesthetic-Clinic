@@ -1,9 +1,8 @@
-class PatientRecordController < ApplicationController
- 
-  before_action :require_signin, :require_admin_rights
+class PatientRecordsController < ApplicationController
+	before_action :require_signin, :require_admin_rights
 
   def index
-    @all_records = PatientRecord.all
+    @records = PatientRecord.all
   end
 
   def show
@@ -27,4 +26,5 @@ class PatientRecordController < ApplicationController
   def patient_record_params
     patient_record_params = params.require(:patient_record).permit(:first_name, :last_name, :email, :phone_number) 
   end
+
 end

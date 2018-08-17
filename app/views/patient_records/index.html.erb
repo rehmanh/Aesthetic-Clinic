@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    
+    <header class="display-12">
+      <h2>All Patients</h2>
+      <hr>
+    </header>
+    
+    <ul>
+      <% @records.each do |record| %>
+        <li><%= record.first_name %></li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
