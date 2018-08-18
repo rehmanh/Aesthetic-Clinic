@@ -19,8 +19,9 @@
 
 ##### Backlog: 
 
-- [ ] Make Users completely separated from the PatientRecord table
-- [ ] create views for the PatientRecord table
+- [x] Make Users completely separated from the PatientRecord table
+- [x] create views for the PatientRecord table
+- [ ] fix date system for appointments
 - [ ] Add treatment information and patient history to PatientRecord table
 - [ ] Add image assets to procedures and home page
 - [ ] Fix error reporting on Form Modals

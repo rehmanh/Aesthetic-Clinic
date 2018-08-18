@@ -6,8 +6,7 @@
       <hr>
     </header>
 
-    <div style="text-align: center;">
-      <div class="profile col-md-6">
+      <div class="profile col-md-6 col-md-offset-3">
         <h3 class="text-center">Personal Information</h3>
         <hr>
         <h3>Name</h3>
@@ -21,12 +20,9 @@
           <%= link_to edit_patient_record_path, remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editAccountBtn' do %>
             <button class="btn btn-warning user-button">Edit Record</button>
           <% end %>
-          <%#= link_to root_url, method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' } do %>
-            <!-- <button class="btn btn-danger user-button">Delete Account</button> -->
-          <%# end %>
+          <!-- if deletion is needed, get link to delete method from users -->
         </div>
       </div>
-    </div>
 
   </div>
 </div>
