@@ -1,6 +1,12 @@
-<header class="container fullwidth heading">
-  <h1>Add New Patient Record</h1>
-</header>
+<% if @record.new_record? %>
+  <header class="container fullwidth heading">
+    <h1>Add New Patient Record</h1>
+  </header>
+<% else %>
+  <header class="container fullwidth heading">
+    <h1>Update <%= record_full_name @record %>'s Record</h1>
+  </header>
+<% end %>
 
 <%= form_for(@record) do |u| %>
   <%= render 'shared/errors', object: @record %>
@@ -22,7 +28,7 @@
     <div class="form-group">
         <%= u.label :email, nil %>
         <% if @record.new_record? %>
-        <span class="required fullwidth">&nbsp;*</span><br>
+          <span class="required fullwidth">&nbsp;*</span><br>
         <% end %>
         <%= u.email_field :email, size: 40, required: true, class: 'fullwidth' %>
     </div>
@@ -33,6 +39,10 @@
         <% end %>
         <%= u.text_field :phone_number, size: 40, required: true, type: "number", class: 'fullwidth' %>
     </div>
-    <%= u.submit "Create Patient", class: 'btn btn-primary fullwidth' %>
+    <% if @record.new_record? %>
+      <%= u.submit "Create Patient", class: 'btn btn-primary fullwidth' %>
+    <% else %>
+      <%= u.submit "Update Patient", class: 'btn btn-primary fullwidth' %>
+    <% end %>
   </form>
 <% end %>

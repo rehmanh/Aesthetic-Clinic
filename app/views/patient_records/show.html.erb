@@ -18,7 +18,7 @@
         <p> <span class="glyphicon glyphicon-earphone"></span> <%= @record.phone_number %> </p>
         <hr>
         <div class="text-center">
-          <%= link_to edit_user_path, remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editAccountBtn' do %>
+          <%= link_to edit_patient_record_path, remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editAccountBtn' do %>
             <button class="btn btn-warning user-button">Edit Record</button>
           <% end %>
           <%#= link_to root_url, method: :delete, data: {  confirm: 'Are you sure you want to delete your account?' } do %>

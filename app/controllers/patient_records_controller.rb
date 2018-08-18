@@ -29,12 +29,17 @@ class PatientRecordsController < ApplicationController
 
   def edit
     @record = PatientRecord.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update
     @record = PatientRecord.find(params[:id])
     if @record.update(patient_record_params)
       flash[:notice] = "Patient record successfully updated"
+      redirect_to @record
     else
       render :edit
     end

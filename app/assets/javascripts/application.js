@@ -7,4 +7,5 @@
 //= require bootstrap-datetimepicker
 //= require alerts
 //= require navbar
+//= require patient_record
 //= require_tree . 

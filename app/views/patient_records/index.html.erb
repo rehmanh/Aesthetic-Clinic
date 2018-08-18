@@ -21,7 +21,7 @@
   	  	</thead>
   	  	<tbody>
           <% @records.each do |record| %>
-  	  	    <tr>
+  	  	    <tr style="cursor: pointer;">
   	  	      <th scope="row"><%= record.id %></th>
   	  	      <td><%= display_tick(record) %></td>
   	  	      <td><%= record.first_name %></td>
@@ -41,7 +41,3 @@
 
   </div>
 </div>
-
-
-
-
