@@ -8,15 +8,15 @@
 
     <!-- <div class="col-md-12"> -->
     <div class="table-responsive">
-  	  <table class="table table-hover" style="text-align: center;">
+  	  <table class="table table-hover table-bordered" style="text-align: left;">
   	  	<thead>
   	  	  <tr>
   	  	    <th scope="col" >Patient ID</th>
-  	  	    <th scope="col" style="text-align: center;">User Account Exists?</th>
-  	  	    <th scope="col" style="text-align: center;">First Name</th>
-  	  	    <th scope="col" style="text-align: center;">Last Name</th>
-  	  	    <th scope="col" style="text-align: center;">Phone Number</th>
-  	  	    <th scope="col" style="text-align: center;">Email Address</th>
+  	  	    <th scope="col" >User Account Exists?</th>
+  	  	    <th scope="col" >First Name</th>
+  	  	    <th scope="col" >Last Name</th>
+  	  	    <th scope="col" >Phone Number</th>
+  	  	    <th scope="col" >Email Address</th>
   	  	  </tr>
   	  	</thead>
   	  	<tbody>
@@ -33,6 +33,11 @@
   	  	</tbody>
 		  </table> 
     </div>
+
+		<%= link_to new_patient_record_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>
+      <span class="btn btn-primary" style="border-radius: 0;">New Patient</span>
+    <% end %>
+
 
   </div>
 </div>
