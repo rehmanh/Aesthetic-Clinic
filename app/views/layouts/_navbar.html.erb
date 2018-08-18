@@ -15,8 +15,8 @@
         <li class="nav-button nonmodal"> Dedicated To Phone Sex </li>
       <% end %>
       <% if is_user_admin? %>
-        <%= link_to users_path do %>
-          <li class="nav-button nonmodal">All Patients</li>
+        <%= link_to patient_records_path do %>
+          <li class="nav-button nonmodal">Patients</li>
         <% end %>
         <%= link_to appointments_path do %>
           <li class="nav-button nonmodal">Appointments</li>

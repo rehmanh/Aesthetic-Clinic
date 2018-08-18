@@ -10,15 +10,34 @@ class PatientRecordsController < ApplicationController
   end
 
   def new
+    @record = PatientRecord.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
+    @record = PatientRecord.new(patient_record_params)
+    if @record.save
+      flash[:notice] = "Patient record successfully created."
+      redirect_to @record
+    else
+      render :new
+    end
   end
 
   def edit
+    @record = PatientRecord.find(params[:id])
   end
 
   def update
+    @record = PatientRecord.find(params[:id])
+    if @record.update(patient_record_params)
+      flash[:notice] = "Patient record successfully updated"
+    else
+      render :edit
+    end
   end
   
   private

@@ -11,31 +11,30 @@
 
 ##### Issues / Notes
 
-###### Progress 07/31/2018
-- Is a record number always unique?
-- Can one patient have more than one record number
-- Do I want to create association between the users that create their own accounts and the patients that are recorded internally?
+###### Progress 08/16/2018
+- Created PatientRecords table and linked with users
+- Administrators cannot access the User table, but only the PatientRecords
 
 ---
 
 ##### Backlog: 
 
-Frontend Backlog | Backend Backlog
----------------- | ---------------
-~~Make custom navbar (see old project for style guides)~~ | Implement "Forgot your password" / password reset
-Add image assets to procedures and home page | ~~Fix appointment validations~~
-~~Make procedures modals~~ | Maybe send out mailers when appointment is scheduled.
-~~Make footer that stays across pages (sticky footer)~~ | Remove Complaint from Appointments
-~~Make custom flash messages~~ | Have a "Treatment?" or "Consultation" option for Patients
-Fix error reporting on form modals | Consider adding record number column for users
-~~Make hamburger menu consistent with sidebar~~ | look at how to send texts to users
-~~Add button links to sidebar~~ | ADMC only on Fridays
-Make colorscheme for site (start with sidebar) | Figure out how to make website better at crawling
-Add "Request An Appointment Today" section on Homepage [like this](advanceddhcare.com) | Consider adding Local Users that won't be affected by the current User Profile page 
-Make procedure modals show only 6 at first with a 'View More Button' | Fix has many associations length b/w user and appointments
-~~Add Styling to User Profile Page~~ | Make a nice seedfile
-Add content to Footer | Add record number field to users table
-~~Fix behavior of sidebar on Turbolinks~~ | Search bar for users
-Add 2 nice consistent font families | create PatientRecord table and associate with Users
-Add image assets and descriptions for procedures |
-Add appointments index page for admin users |
+- [ ] Make Users completely separated from the PatientRecord table
+- [ ] create views for the PatientRecord table
+- [ ] Add treatment information and patient history to PatientRecord table
+- [ ] Add image assets to procedures and home page
+- [ ] Fix error reporting on Form Modals
+- [ ] Add request an appointment today feature in the jumbotron on homepage
+- [ ] Make procedure modals show only 6 at first with a view more button
+- [ ] Add content to footer
+- [ ] Add 2 consistent font families
+- [ ] Add image assets and descriptions for procedures
+- [ ] Add appointment index page for admins
+- [ ] Implement forgot your password feature for users
+- [ ] Figure out mailers for users that have an email address
+- [ ] Remove complaint from appointments
+- [ ] Have a 'treatment' or 'consultation' checkbox for Patient Appointments
+- [ ] Figure out sending text messages to users
+- [ ] Make robots better at crawling
+- [ ] Make a basic seedfile
+- [ ] Search bar for patient records

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
  
-  before_action :require_signin, except: [:new, :create] # require_signin is defined in ApplicationController
+  before_action :require_signin, except: [:new, :create] 
   before_action :require_admin_rights, only: [:index]
   
   def index
