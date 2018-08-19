@@ -20,49 +20,19 @@ Procedure.create!([
     %{
       The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
     }.squish
-  }
-])
-
-User.create!([
+  },
   {
-    first_name: 'John',
-    last_name: 'Doe',
-    email: 'john@example.com',
-    phone_number: '03009233780',
-    complaint:
+    name: 'The Flutterby',
+    description:
     %{
-      I have a headache and I don't think it is relatd to Dermatlogy, but here I am anyways
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
     }.squish
   },
   {
-    first_name: 'Jane',
-    last_name: 'Doe',
-    email: 'jane@example.com',
-    phone_number: '666-666-6666',
-    complaint:
+    name: 'The Flutterby',
+    description:
     %{
-      Why won't any one love me in this cule cruel world?   
-    }.squish
-  },
-  {
-    first_name: 'Charlie',
-    last_name: 'Mann',
-    email: 'charles@mann.com',
-    phone_number: '03009233780',
-    complaint: 
-    %{
-      I have this urge to always bite people and I am not sure why...
-    }.squish
-  },
-  {
-    first_name: 'Hanson, The',
-    last_name: 'Unicorn',
-    email: 'hanson@theunicorn.com',
-    phone_number: '67867867867867867867867867',
-    complaint: 
-    %{
-      Charlie bit me, and it reaaally hurt! :(
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
     }.squish
   }
-
 ])

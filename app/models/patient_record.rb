@@ -1,5 +1,6 @@
 class PatientRecord < ApplicationRecord
   belongs_to :recordable, polymorphic: true, optional: true
+  has_many :patient_notes
   
 	validates :first_name, presence: true
   validates :last_name, presence: true
