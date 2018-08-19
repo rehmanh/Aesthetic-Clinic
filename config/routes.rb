@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resource :session
   resources :appointments
   resources :patient_records
+  resources :patient_notes
   root "procedures#index"
   get 'signup', to: "users#new"
 end
