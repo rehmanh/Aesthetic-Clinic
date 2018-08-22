@@ -22,7 +22,8 @@
 - [x] Make Users completely separated from the PatientRecord table
 - [x] create views for the PatientRecord table
 - [ ] fix date system for appointments
-- [ ] Add treatment information and patient history to PatientRecord table
+- [x] Add treatment information and patient history to PatientRecord table
+- [x] Fix PatientNote resources
 - [ ] Add image assets to procedures and home page
 - [ ] Fix error reporting on Form Modals
 - [ ] Add request an appointment today feature in the jumbotron on homepage

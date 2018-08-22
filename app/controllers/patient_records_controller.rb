@@ -7,6 +7,7 @@ class PatientRecordsController < ApplicationController
 
   def show
     @record = PatientRecord.find(params[:id])
+    session[:patient_record_id] = @record.id
   end
 
   def new

@@ -11,10 +11,11 @@ class PatientNotesController < ApplicationController
   end
 
   def create
+    fail
     @patient_note = @record.patient_notes.new(patient_note_params)
     @patient_note.patient_record = @record 
     if @patient_note.save
-      flash[:notice] = "Note added for " + record_full_name @record
+      flash[:notice] = "Note added for " # + record_full_name @record
       redirect_to @record
     else
       render :new
@@ -40,7 +41,7 @@ class PatientNotesController < ApplicationController
   end
 
   def set_patient_record
-    @record = PatientRecord.find(params[:id])
+    @record = PatientRecord.find(session[:patient_record_id])
   end
 
 end

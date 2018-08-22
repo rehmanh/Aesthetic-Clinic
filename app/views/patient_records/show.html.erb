@@ -24,5 +24,9 @@
       </div>
     </div>
 
+    <%= link_to new_patient_note_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>
+      New Note
+    <% end %>
+
   </div>
 </div>
