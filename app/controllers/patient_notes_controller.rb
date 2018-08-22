@@ -11,11 +11,10 @@ class PatientNotesController < ApplicationController
   end
 
   def create
-    fail
     @patient_note = @record.patient_notes.new(patient_note_params)
     @patient_note.patient_record = @record 
     if @patient_note.save
-      flash[:notice] = "Note added for " # + record_full_name @record
+      flash[:notice] = "New note created."
       redirect_to @record
     else
       render :new

@@ -19,6 +19,7 @@
 
 ##### Backlog: 
 
+- [ ] make appointment show and notes show div better
 - [x] Make Users completely separated from the PatientRecord table
 - [x] create views for the PatientRecord table
 - [ ] fix date system for appointments
