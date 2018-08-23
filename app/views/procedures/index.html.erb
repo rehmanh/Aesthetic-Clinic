@@ -8,7 +8,18 @@
         <span style="padding-bottom: 1.5rem!important;"><%= p.name %></span>
       </div>
     <% end %> 
-    <button class="btn user-button account-button" id="toggleButton" style="margin-top: 5px; margin-bottom: 5px;">
+    <% @procedures[6..-1].each do |p| %>
+      <div class="col-lg-4 col-md-6 col-xs-6 mb-4 extra-procedures"> <!-- this will house the superflous procedures-->
+        <%= link_to p, remote: true, data: { toggle: 'modal', target: 'modal-window' }, class: 'd-block h-100' do %>
+          <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300">
+        <% end %>
+        <span style="padding-bottom: 1.5rem!important;"><%= p.name %></span>
+      </div>
+    <% end %>
+  </div>
+
+  <div style="padding: 20px; text-align: center;">
+    <button class="btn user-button account-button" id="toggle-button" style="margin-top: 5px; margin-bottom: 5px;">
       View More
     </button>
   </div>
@@ -26,4 +37,8 @@
 
 </div>
  
- 
+<style>
+  .extra-procedures {
+    display: none;
+  }
+</style>

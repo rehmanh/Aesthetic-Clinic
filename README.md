@@ -28,7 +28,7 @@
 - [ ] Add image assets to procedures and home page
 - [ ] Fix error reporting on Form Modals
 - [ ] Add request an appointment today feature in the jumbotron on homepage
-- [ ] Make procedure modals show only 6 at first with a view more button
+- [x] Make procedure modals show only 6 at first with a view more button
 - [ ] Add content to footer
 - [ ] Add 2 consistent font families
 - [ ] Add image assets and descriptions for procedures

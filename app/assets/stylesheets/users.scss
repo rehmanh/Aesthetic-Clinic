@@ -24,8 +24,18 @@
   margin-right: 5px;
 }
 
+.user-button:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .account-button {
   background-color: rgba(19, 154, 255, 1.0);
+  color: white;
+}
+
+.account-button:hover {
+  text-decoration: none;
   color: white;
 }
 

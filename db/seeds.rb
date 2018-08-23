@@ -34,5 +34,33 @@ Procedure.create!([
     %{
       The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
     }.squish
+  },
+  {
+    name: 'The Flutterby',
+    description:
+    %{
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
+    }.squish
+  },
+  {
+    name: 'The Flutterby',
+    description:
+    %{
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
+    }.squish
+  },
+  {
+    name: 'The Flutterby',
+    description:
+    %{
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
+    }.squish
+  },
+  {
+    name: 'The Flutterby',
+    description:
+    %{
+      The name of this description basically speaks for itself here, there is nothing to see here, other than the fact that there will be a butterfly somehow involved...
+    }.squish
   }
 ])
