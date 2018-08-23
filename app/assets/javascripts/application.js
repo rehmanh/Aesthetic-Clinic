@@ -8,4 +8,5 @@
 //= require alerts
 //= require navbar
 //= require patient_record
+//= require procedures
 //= require_tree . 

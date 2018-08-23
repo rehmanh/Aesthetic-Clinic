@@ -10,5 +10,4 @@ module PatientRecordsHelper
     record.first_name + " " + record.last_name
   end
 
-
 end

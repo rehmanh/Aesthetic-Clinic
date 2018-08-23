@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row text-center text-lg-left">
-    <% @procedures.each do |p| %>
+    <% @procedures[0..5].each do |p| %>
       <div class="col-lg-4 col-md-6 col-xs-6 mb-4">
         <%= link_to p, remote: true, data: { toggle: 'modal', target: 'modal-window' }, class: 'd-block h-100' do %>
           <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300">
@@ -8,6 +8,9 @@
         <span style="padding-bottom: 1.5rem!important;"><%= p.name %></span>
       </div>
     <% end %> 
+    <button class="btn user-button account-button" id="toggleButton" style="margin-top: 5px; margin-bottom: 5px;">
+      View More
+    </button>
   </div>
   
   <% if is_user_admin?  %>

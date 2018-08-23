@@ -27,12 +27,18 @@
     <div class="profile col-md-6 col-md-offset-3">
       <h3 class="text-center">Notes</h3>
       <hr>
-      <h3>Name</h3>
-      <p> <span class="glyphicon glyphicon-user"></span>  <%= record_full_name @record %> </p>
-      <h3>Email</h3>
-      <p> <span class="glyphicon glyphicon-envelope"></span> <%= @record.email %> </p>
-      <h3>Phone Number</h3>
-      <p> <span class="glyphicon glyphicon-earphone"></span> <%= @record.phone_number %> </p>
+      <% if @notes.exists? %> 
+        <% @notes.each.with_index(1) do |note, i| %>
+				  <%= link_to  %>	
+        	<div class="patient-notes">
+            <p>
+							<%= "#{i}. " + truncate(note.notes, length: 30) %>
+            </p>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-center">Patient does not have any notes. Click on the button below to create a new note.</p>
+      <% end %>
       <hr>
       <div class="text-center">
         <%= link_to new_patient_note_path, remote: true, data: { toggle: 'modal', target: 'modal-window' } do %>

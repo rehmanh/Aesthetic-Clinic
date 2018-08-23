@@ -46,7 +46,7 @@
               <strong style="font-size: 1.1em;">Date:</strong> <%= format_date(appt.appointment_date_time)  %> <br>
               <strong style="font-size: 1.1em;">Time:</strong> <%= format_time(appt.appointment_date_time) %> <br>
               </p>
-              <% if@user == current_user %>
+              <% if @user == current_user %>
                 <div class="text-center">
                   <%= link_to edit_appointment_path(appt), remote: true, data: { toggle: 'modal', target: 'modal-window' }, id: 'editApptBtn' do %>
                     <button class="btn btn-warning user-button" style="margin-bottom: 1.5rem!important; ">Edit Appointment</button>
