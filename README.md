@@ -30,6 +30,8 @@
 - [ ] Add request an appointment today feature in the jumbotron on homepage
 - [x] Make procedure modals show only 6 at first with a view more button
 - [ ] Add content to footer
+- [ ] add terms of service page
+- [ ] add about the doctor page
 - [ ] Add 2 consistent font families
 - [ ] Add image assets and descriptions for procedures
 - [ ] Add appointment index page for admins

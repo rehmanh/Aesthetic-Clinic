@@ -22,6 +22,7 @@ class PatientNotesController < ApplicationController
   end
 
   def show
+    @patient_note = PatientNote.find(params[:id])
     respond_to do |format|
       format.html
       format.js

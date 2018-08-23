@@ -29,7 +29,7 @@
       <hr>
       <% if @notes.exists? %> 
         <% @notes.each.with_index(1) do |note, i| %>
-				  <%= link_to  %>	
+	        <%= link_to "View Note", note, remote: true, data: { toggle: 'modal', target: 'modal-window' } %>
         	<div class="patient-notes">
             <p>
 							<%= "#{i}. " + truncate(note.notes, length: 30) %>
