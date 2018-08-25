@@ -19,9 +19,11 @@
   </div>
 
   <div style="padding: 20px; text-align: center;">
-    <button class="btn user-button account-button" id="toggle-button" style="margin-top: 5px; margin-bottom: 5px;">
-      View More
-    </button>
+    <% if @procedures.count > 6 %>
+      <button class="btn user-button account-button" id="toggle-button" style="margin-top: 5px; margin-bottom: 5px;">
+        View More
+      </button>
+    <% end %>
   </div>
   
   <% if is_user_admin?  %>
