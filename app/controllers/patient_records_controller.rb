@@ -7,7 +7,6 @@ class PatientRecordsController < ApplicationController
 
   def show
     @record = PatientRecord.find(params[:id])
-    @notes = @record.patient_notes
     session[:patient_record_id] = @record.id
   end
 

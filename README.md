@@ -43,3 +43,5 @@
 - [ ] Make robots better at crawling
 - [ ] Make a basic seedfile
 - [ ] Search bar for patient records
+- [ ] remove patient id from view of patient record
+- [ ] manually enter patient record numbers
