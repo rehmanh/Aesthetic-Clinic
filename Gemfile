@@ -16,6 +16,12 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'rack', ">= 2.0.6" 
+
+gem 'loofah', ">= 2.2.3"
+
+gem 'rb-readline'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
